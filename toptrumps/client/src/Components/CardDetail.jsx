@@ -4,16 +4,18 @@ const CardDetail = ({ card }) => {
 
 
   return(
-  <>
-  <div>Name: {card.Individual}</div>
-  <div>Most Loveable: {card["Most Lovable"]}</div>
-  <div>Smartest: {card.Smartest}</div>
-  <div>Fattest: {card.Fattest}</div>
-  <div>Biggest Nerd: {card["Biggest Nerd"]}</div>
-  <div>Greatest Anarchist: {card["Greatest Anarchist"]}</div>
-  <div>Walk of Fame Rating: {card["Walk of Fame Rating"]}</div>
-  <img src={card.img_url} alt="" />
-</>
+
+  <li key = {card._id}>
+  
+  <p>Name: {card.Individual}</p>
+  <p>Most Loveable: {card["Most Lovable"]}</p>
+  <p>Smartest: {card.Smartest}</p>
+  <p>Fattest: {card.Fattest}</p>
+  <p>Biggest Nerd: {card["Biggest Nerd"]}</p>
+  <p>Greatest Anarchist: {card["Greatest Anarchist"]}</p>
+  <p>Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
+  {/* <img className="character-image" src={card.img_url} alt="Photo of simpsons character" /> */}
+  </li>
   )
 };
 
