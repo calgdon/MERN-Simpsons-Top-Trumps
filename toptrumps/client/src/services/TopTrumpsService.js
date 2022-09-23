@@ -34,3 +34,5 @@ const TopTrumpsService = {
 
 
 }
+
+export default TopTrumpsService;

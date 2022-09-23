@@ -1,12 +1,12 @@
 import React from 'react'
 import CardForm from '../Components/CardForm'
-import CardList from '../Components/CardList'
+import CardGrid from '../Components/CardGrid'
 
-const ViewCardsPage = () => {
+const ViewCardsPage = ({cards}) => {
   return (
     <>
     <div>ViewCardsPage</div>
-    <CardList/>
+    <CardGrid cards={cards}/>
     <CardForm/>
     </>
   )
