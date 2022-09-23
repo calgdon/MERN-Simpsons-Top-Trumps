@@ -9,7 +9,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 25,
       "Biggest Nerd": 144,
       "Greatest Anarchist": 5,
-      "Walk of Fame Rating": 19
+      "Walk of Fame Rating": 19,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png"
     },
     {
       "Individual": "Patty & Selma Bouvier",
@@ -18,7 +19,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 43,
       "Biggest Nerd": 150,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 17
+      "Walk of Fame Rating": 17,
+      "img_url": "https://static.wikia.nocookie.net/villains/images/c/c3/Patty_%26_Selma_Bouvier.jpg/revision/latest?cb=20170528014832"
     },
     {
       "Individual": "Marge Simpson",
@@ -27,7 +29,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 30,
       "Biggest Nerd": 146,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 18
+      "Walk of Fame Rating": 18,
+      "img_url": "https://mediaproxy.salon.com/width/1200/height/675/https://media.salon.com/2014/07/marge_simpson.jpg"
     },
     {
       "Individual": "Abraham \"Grampa\" Simpson",
@@ -36,7 +39,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 33,
       "Biggest Nerd": 176,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 17
+      "Walk of Fame Rating": 17,
+      "img_url": "https://www.giantbomb.com/a/uploads/scale_medium/0/6507/369043-abe_simpson.gif"
     },
     {
       "Individual": "Lisa Simpson",
@@ -45,7 +49,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 24,
       "Biggest Nerd": 142,
       "Greatest Anarchist": 4.5,
-      "Walk of Fame Rating": 18
+      "Walk of Fame Rating": 18,
+      "img_url": "https://sketchok.com/images/articles/01-cartoons/001-simpsons/15/10.jpg"
     },
     {
       "Individual": "Homer Simpson",
@@ -54,7 +59,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 47,
       "Biggest Nerd": 148,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 20
+      "Walk of Fame Rating": 20,
+      "img_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F08%2Fsimp_homersingle08_f_hires2-2000.jpg&q=60"
     },
     {
       "Individual": "Maggie Simpson",
@@ -63,7 +69,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 22,
       "Biggest Nerd": 174,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 18
+      "Walk of Fame Rating": 18,
+      "img_url": "https://static.simpsonswiki.com/images/thumb/9/9d/Maggie_Simpson.png/250px-Maggie_Simpson.png"
     },
     {
       "Individual": "Apu",
@@ -72,7 +79,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 39,
       "Biggest Nerd": 152,
       "Greatest Anarchist": 4.5,
-      "Walk of Fame Rating": 13.5
+      "Walk of Fame Rating": 13.5,
+      "img_url": "https://images.immediate.co.uk/production/volatile/sites/3/2020/01/apu-simpsons-2f11ef9.jpg?resize=620,413?quality=90&resize=620,414"
     },
     {
       "Individual": "Barney Gumble",
@@ -81,7 +89,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 49,
       "Biggest Nerd": 186,
       "Greatest Anarchist": 3.5,
-      "Walk of Fame Rating": 16
+      "Walk of Fame Rating": 16,
+      "img_url": "https://beingsakin.files.wordpress.com/2012/04/barney_gumble.png?w=848"
     },
     {
       "Individual": "Ned Flanders",
@@ -90,7 +99,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 36,
       "Biggest Nerd": 198,
       "Greatest Anarchist": 2,
-      "Walk of Fame Rating": 15
+      "Walk of Fame Rating": 15,
+      "img_url": "https://www.nme.com/wp-content/uploads/2021/08/Ned-Flanders-696x442.jpg"
     },
     {
       "Individual": "Edna Krabappel",
@@ -99,7 +109,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 28,
       "Biggest Nerd": 162,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 8
+      "Walk of Fame Rating": 8,
+      "img_url": "https://cdn.jwplayer.com/v2/media/iab1T7ef/poster.jpg?width=1920"
     },
     {
       "Individual": "Chief Wiggum",
@@ -108,7 +119,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 48,
       "Biggest Nerd": 182,
       "Greatest Anarchist": 2,
-      "Walk of Fame Rating": 14
+      "Walk of Fame Rating": 14,
+      "img_url": "https://www.giantbomb.com/a/uploads/scale_medium/0/9493/2497402-chief-wiggum.gif"
     },
     {
       "Individual": "Dr Julius Hibbert",
@@ -117,7 +129,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 44,
       "Biggest Nerd": 164,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 7
+      "Walk of Fame Rating": 7,
+      "img_url": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F02%2Fthe-simpsons-switches-voice-actors-dr-hibbert-recasting-black-characters-info-0.jpg?w=960&cbr=1&q=90&fit=max"
     },
     {
       "Individual": "Itchy & Scratchy",
@@ -126,7 +139,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 30,
       "Biggest Nerd": 156,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 15
+      "Walk of Fame Rating": 15,
+      "img_url": "https://pyxis.nymag.com/v1/imgs/919/38d/948d1c1554a67baa4c096fc18176d60974-26-itchy-scratchy.rsquare.w700.jpg"
     },
     {
       "Individual": "Krusty the Clown",
@@ -135,7 +149,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 46,
       "Biggest Nerd": 154,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 16
+      "Walk of Fame Rating": 16,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Krustytheclown.png"
     },
     {
       "Individual": "Lenny & Carl",
@@ -144,7 +159,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 27,
       "Biggest Nerd": 194,
       "Greatest Anarchist": 2.5,
-      "Walk of Fame Rating": 11
+      "Walk of Fame Rating": 11,
+      "img_url": "https://static.wikia.nocookie.net/simpsonstappedout/images/b/b0/LennyandCarl.png/revision/latest?cb=20131022062636"
     },
     {
       "Individual": "Milhouse Van Houten",
@@ -153,7 +169,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 32,
       "Biggest Nerd": 188,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 12
+      "Walk of Fame Rating": 12,
+      "img_url": "https://static.wikia.nocookie.net/springfieldbound/images/2/23/Milhouse_Van_Houten_%28Official_Image%29.png/revision/latest?cb=20200517161925"
     },
     {
       "Individual": "Moe Szyslak",
@@ -162,7 +179,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 22,
       "Biggest Nerd": 172,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 16
+      "Walk of Fame Rating": 16,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Moe_Szyslak.png"
     },
     {
       "Individual": "C. Montgomery Burns",
@@ -171,7 +189,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 20,
       "Biggest Nerd": 178,
       "Greatest Anarchist": 4.5,
-      "Walk of Fame Rating": 16
+      "Walk of Fame Rating": 16,
+      "img_url": "https://static.wikia.nocookie.net/villains/images/3/35/Buns.png/revision/latest/top-crop/width/360/height/360?cb=20211207054709"
     },
     {
       "Individual": "Martin",
@@ -180,7 +199,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 45,
       "Biggest Nerd": 170,
       "Greatest Anarchist": 3.5,
-      "Walk of Fame Rating": 10
+      "Walk of Fame Rating": 10,
+      "img_url": "https://static.simpsonswiki.com/images/4/46/Martin_Prince.png"
     },
     {
       "Individual": "Principal Skinner",
@@ -189,7 +209,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 32,
       "Biggest Nerd": 180,
       "Greatest Anarchist": 2.5,
-      "Walk of Fame Rating": 14
+      "Walk of Fame Rating": 14,
+      "img_url": "https://static.wikia.nocookie.net/p__/images/3/3a/Seymour_Skinner.png/revision/latest/top-crop/width/360/height/360?cb=20200804144332&path-prefix=protagonist"
     },
     {
       "Individual": "Nelson Muntz",
@@ -198,7 +219,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 33,
       "Biggest Nerd": 140,
       "Greatest Anarchist": 2.5,
-      "Walk of Fame Rating": 8
+      "Walk of Fame Rating": 8,
+      "img_url": "https://static.wikia.nocookie.net/antagonists/images/c/c5/Nelson_Muntz.png/revision/latest?cb=20180317023858"
     },
     {
       "Individual": "Otto",
@@ -207,7 +229,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 32,
       "Biggest Nerd": 184,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 12
+      "Walk of Fame Rating": 12,
+      "img_url": "https://i.pinimg.com/736x/7f/e8/2d/7fe82dc422c1455ef1980580db5c70d2.jpg"
     },
     {
       "Individual": "Sherri and Terri",
@@ -216,7 +239,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 28,
       "Biggest Nerd": 176,
       "Greatest Anarchist": 3,
-      "Walk of Fame Rating": 11
+      "Walk of Fame Rating": 11,
+      "img_url": "https://pbs.twimg.com/profile_images/1212438728783867905/KhBeQguF_400x400.jpg"
     },
     {
       "Individual": "Sideshow Bob",
@@ -225,7 +249,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 38,
       "Biggest Nerd": 190,
       "Greatest Anarchist": 2.5,
-      "Walk of Fame Rating": 8
+      "Walk of Fame Rating": 8,
+      "img_url": "https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTg5ODczODUyMDU3NTI3OTk2/ranking-every-sideshow-bob-episode-of-the-simpsons.jpg"
     },
     {
       "Individual": "Waylon Smithers",
@@ -234,7 +259,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 35,
       "Biggest Nerd": 192,
       "Greatest Anarchist": 2.5,
-      "Walk of Fame Rating": 9
+      "Walk of Fame Rating": 9,
+      "img_url": "https://static.wikia.nocookie.net/villains/images/8/8f/Smithers.png/revision/latest/top-crop/width/360/height/360?cb=20111219205156"
     },
     {
       "Individual": "Snowball ll",
@@ -243,7 +269,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 26,
       "Biggest Nerd": 158,
       "Greatest Anarchist": 2,
-      "Walk of Fame Rating": 11
+      "Walk of Fame Rating": 11,
+      "img_url": "https://mystickermania.com/cdn/stickers/simpsons-stickers/simpsons-snowball-ii-512x512.png"
     },
     {
       "Individual": "Todd & Rod Flanders",
@@ -252,7 +279,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 32,
       "Biggest Nerd": 196,
       "Greatest Anarchist": 2,
-      "Walk of Fame Rating": 9
+      "Walk of Fame Rating": 9,
+      "img_url": "https://static.wikia.nocookie.net/poohadventures/images/f/f6/Rodd_flanders.gif/revision/latest?cb=20220105173342"
     },
     {
       "Individual": "Groundskeeper Willie",
@@ -261,7 +289,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 35,
       "Biggest Nerd": 166,
       "Greatest Anarchist": 4,
-      "Walk of Fame Rating": 13
+      "Walk of Fame Rating": 13,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/d/dc/GroundskeeperWillie.png"
     },
     {
       "Individual": "Santa's Little Helper",
@@ -270,7 +299,8 @@ db.simpsonsTopTrumps.insertMany([
       "Fattest": 20,
       "Biggest Nerd": 160,
       "Greatest Anarchist": 1,
-      "Walk of Fame Rating": 13
+      "Walk of Fame Rating": 13,
+      "img_url": "https://static.simpsonswiki.com/images/thumb/2/2c/Santa%27s_Little_Helper.png/200px-Santa%27s_Little_Helper.png"
     }
    ])
 
