@@ -15,7 +15,7 @@ function App() {
 
   // add a single card to a players deck. Have to pass in actual player Number
 
-  const addCardToDeck = (card, playerNumber) => {
+  const addCardToDeck = (cards, playerNumber) => {
     let playerDeck = undefined
     let setDeck = undefined
     if (playerNumber === 1) {
@@ -25,11 +25,12 @@ function App() {
       playerDeck = player2Deck
       setDeck = setPlayer2Deck
     }
-    if (!playerDeck){setDeck(card)}
+    if (!playerDeck){setDeck(cards)}
     else{
     const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
-    console.log(copyOfPlayerDeck)
-    copyOfPlayerDeck.push(card)
+    cards.forEach((card) => {
+          copyOfPlayerDeck.push(card)
+    }) 
     setDeck(copyOfPlayerDeck)}
   }
 
@@ -94,19 +95,17 @@ function App() {
   const decideWinner = (attribute) => {
     if (controllingPlayer == 1) {
       if (player1Card[attribute] > player2Card[attribute]) {
-        addCardToDeck(player1Card, 1), addCardToDeck(player2Card, 1)
+        addCardToDeck([player1Card, player2Card], 1)
       } else {
-        addCardToDeck(player1Card, 2),
-          addCardToDeck(player2Card, 2),
+        addCardToDeck([player1Card, player2Card], 2),
           setControllingPlayer(2)
       }
     }
     if (controllingPlayer == 2) {
       if (player2Card[attribute] > player1Card[attribute]) {
-        addCardToDeck(player2Card, 2), addCardToDeck(player1Card, 2)
+        addCardToDeck([player2Card, player1Card], 2)
       } else {
-        addCardToDeck(player2Card, 1),
-          addCardToDeck(player1Card, 1),
+        addCardToDeck([player2Card, player1Card], 1),
           setControllingPlayer(1)
       }
     }
