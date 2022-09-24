@@ -20,7 +20,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 150,
       "Greatest Anarchist": 4,
       "Walk of Fame Rating": 17,
-      "img_url": "https://static.wikia.nocookie.net/villains/images/c/c3/Patty_%26_Selma_Bouvier.jpg/revision/latest?cb=20170528014832"
+      "img_url": "https://i.redd.it/sm90wa8hbva41.jpg"
     },
     {
       "Individual": "Marge Simpson",
@@ -160,7 +160,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 194,
       "Greatest Anarchist": 2.5,
       "Walk of Fame Rating": 11,
-      "img_url": "https://static.wikia.nocookie.net/simpsonstappedout/images/b/b0/LennyandCarl.png/revision/latest?cb=20131022062636"
+      "img_url": "https://cdn3.whatculture.com/images/2022/04/35d27afc1b43e856-600x338.jpg"
     },
     {
       "Individual": "Milhouse Van Houten",
@@ -170,7 +170,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 188,
       "Greatest Anarchist": 3,
       "Walk of Fame Rating": 12,
-      "img_url": "https://static.wikia.nocookie.net/springfieldbound/images/2/23/Milhouse_Van_Houten_%28Official_Image%29.png/revision/latest?cb=20200517161925"
+      "img_url": "https://i.redd.it/h2feay7cd6d71.png"
     },
     {
       "Individual": "Moe Szyslak",
@@ -190,7 +190,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 178,
       "Greatest Anarchist": 4.5,
       "Walk of Fame Rating": 16,
-      "img_url": "https://static.wikia.nocookie.net/villains/images/3/35/Buns.png/revision/latest/top-crop/width/360/height/360?cb=20211207054709"
+      "img_url": "https://static.tvmaze.com/uploads/images/original_untouched/0/2181.jpg"
     },
     {
       "Individual": "Martin",
@@ -210,7 +210,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 180,
       "Greatest Anarchist": 2.5,
       "Walk of Fame Rating": 14,
-      "img_url": "https://static.wikia.nocookie.net/p__/images/3/3a/Seymour_Skinner.png/revision/latest/top-crop/width/360/height/360?cb=20200804144332&path-prefix=protagonist"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/3/3a/Seymour_Skinner.png"
     },
     {
       "Individual": "Nelson Muntz",
@@ -220,7 +220,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 140,
       "Greatest Anarchist": 2.5,
       "Walk of Fame Rating": 8,
-      "img_url": "https://static.wikia.nocookie.net/antagonists/images/c/c5/Nelson_Muntz.png/revision/latest?cb=20180317023858"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/c/c6/Nelson_Muntz.PNG"
     },
     {
       "Individual": "Otto",
@@ -260,7 +260,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 192,
       "Greatest Anarchist": 2.5,
       "Walk of Fame Rating": 9,
-      "img_url": "https://static.wikia.nocookie.net/villains/images/8/8f/Smithers.png/revision/latest/top-crop/width/360/height/360?cb=20111219205156"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/86/Waylon_Smithers_1.png"
     },
     {
       "Individual": "Snowball ll",
@@ -280,7 +280,7 @@ db.simpsonsTopTrumps.insertMany([
       "Biggest Nerd": 196,
       "Greatest Anarchist": 2,
       "Walk of Fame Rating": 9,
-      "img_url": "https://static.wikia.nocookie.net/poohadventures/images/f/f6/Rodd_flanders.gif/revision/latest?cb=20220105173342"
+      "img_url": "https://whatnerd.com/wp-content/uploads/2021/07/worst-simpsons-characters-rod-todd-flanders.jpg"
     },
     {
       "Individual": "Groundskeeper Willie",

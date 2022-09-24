@@ -14,7 +14,7 @@ const CardDetail = ({ card }) => {
   <p>Biggest Nerd: {card["Biggest Nerd"]}</p>
   <p>Greatest Anarchist: {card["Greatest Anarchist"]}</p>
   <p>Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
-  {/* <img className="character-image" src={card.img_url} alt="Photo of simpsons character" /> */}
+  <img className="character-image" src={card.img_url} alt="Photo of simpsons character" />
   </li>
   )
 };
