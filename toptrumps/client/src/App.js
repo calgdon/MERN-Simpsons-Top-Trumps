@@ -25,14 +25,33 @@ function App() {
       playerDeck = player2Deck
       setDeck = setPlayer2Deck
     }
-    const copyOfPlayerDeck = playerDeck.map((card) => card)
+    const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
     copyOfPlayerDeck.push(card)
     setDeck(copyOfPlayerDeck)
   }
 
+  const deleteCardFromDeck = (card, playerNumber) => {
+    let playerDeck = undefined
+    let setDeck = undefined
+    if (playerNumber === 1) {
+      playerDeck = player1Deck
+      setDeck = setPlayer1Deck
+    } else {
+      playerDeck = player2Deck
+      setDeck = setPlayer2Deck
+    }
+    const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck) 
+    const cardIndex = copyOfPlayerDeck.indexOf(card)
+    copyOfPlayerDeck.splice(cardIndex,1)
+    setDeck(copyOfPlayerDeck)
+  }
 
-  const handleClick = () => {
+  const handleClickAdd = () => {
     addCardToDeck(cards[0], 1)
+  }
+
+  const handleClickDelete = () => {
+    deleteCardFromDeck(player1Deck[0],1)
   }
 
   // addCardToDeck(cards[0], 1)
@@ -40,7 +59,8 @@ function App() {
   return (
     <>
       <h1>Welcome to TopTrumps</h1>
-      <button onClick={handleClick}>TESTING</button>
+      <button onClick={handleClickAdd}>TESTING ADD</button>
+      <button onClick={handleClickDelete}>TESTING DELETE</button>
 
       <ViewCardsPage cards={cards} />
     </>
