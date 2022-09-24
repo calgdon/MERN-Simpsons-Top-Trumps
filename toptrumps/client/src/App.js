@@ -74,6 +74,11 @@ function App() {
 
 
 
+  // GAME MECHANICS
+
+  
+
+
 
 
   // Testing of functions
