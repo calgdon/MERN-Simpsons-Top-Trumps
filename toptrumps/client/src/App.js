@@ -25,13 +25,15 @@ function App() {
       playerDeck = player2Deck
       setDeck = setPlayer2Deck
     }
-    if (!playerDeck){setDeck(cards)}
-    else{
-    const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
-    cards.forEach((card) => {
-          copyOfPlayerDeck.push(card)
-    }) 
-    setDeck(copyOfPlayerDeck)}
+    if (!playerDeck) {
+      setDeck(cards)
+    } else {
+      const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
+      cards.forEach((card) => {
+        copyOfPlayerDeck.push(card)
+      })
+      setDeck(copyOfPlayerDeck)
+    }
   }
 
   // Delete a single card from a deck
@@ -79,16 +81,16 @@ function App() {
   let [controllingPlayer, setControllingPlayer] = useState(1)
   let [player1Card, setPlayer1Card] = useState()
   let [player2Card, setPlayer2Card] = useState()
+  let [winner, setWinner] = useState(null)
 
   // assign selected cards
 
   const selectCards = () => {
     setPlayer1Card(player1Deck[0])
-    deleteCardFromDeck(player1Card, 1) 
+    deleteCardFromDeck(player1Card, 1)
     setPlayer2Card(player2Deck[0])
-    deleteCardFromDeck(player2Card, 2) 
+    deleteCardFromDeck(player2Card, 2)
   }
-
 
   // Comparison function
 
@@ -97,19 +99,59 @@ function App() {
       if (player1Card[attribute] > player2Card[attribute]) {
         addCardToDeck([player1Card, player2Card], 1)
       } else {
-        addCardToDeck([player1Card, player2Card], 2),
-          setControllingPlayer(2)
+        addCardToDeck([player1Card, player2Card], 2), setControllingPlayer(2)
       }
     }
     if (controllingPlayer == 2) {
       if (player2Card[attribute] > player1Card[attribute]) {
         addCardToDeck([player2Card, player1Card], 2)
       } else {
-        addCardToDeck([player2Card, player1Card], 1),
-          setControllingPlayer(1)
+        addCardToDeck([player2Card, player1Card], 1), setControllingPlayer(1)
       }
     }
   }
+  
+  // this is what happens when you click start game
+
+  const gameplaySetup = () => {
+    shuffleDeck()
+    dealDeck()
+    selectCards()
+    }
+
+
+
+  const gameplayLoop = (attribute) => {
+    decideWinner(attribute)
+    if (player1Deck.length === cards.length) {
+      setWinner(1)
+    } else if (player2Deck.length === cards.length) {
+      setWinner(2)
+    }
+    else {selectCards()}
+  }
+
+
+  // play game function
+
+  // set up
+
+  // play game
+  // shuffle cards
+  // deal cards
+
+  // gameplay
+
+  // draw card
+  // select attribute
+  // decide winner (distributes cards)
+  // check deck matches masterdeck
+
+  // end state
+
+  // displays winner
+
+  // End of game
 
   // Testing of functions
 
@@ -135,8 +177,18 @@ function App() {
   }
 
   const handleClickDuel = () => {
-    decideWinner("Fattest")
+    decideWinner('Fattest')
   }
+
+  const handleClickPlay = () => {
+      gameplaySetup()
+  }
+
+  const handleClickGameLoop = () => {
+        gameplayLoop("Fattest")
+  }
+
+
 
   // addCardToDeck(cards[0], 1)
 
@@ -149,6 +201,8 @@ function App() {
       <button onClick={handleClickDeal}>TESTING DEAL</button>
       <button onClick={handleClickSelect}>TESTING SELECT</button>
       <button onClick={handleClickDuel}>TESTING DUEL</button>
+      <button onClick={handleClickPlay}>TESTING Play</button>
+      <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
       <ViewCardsPage cards={cards} />
     </>
