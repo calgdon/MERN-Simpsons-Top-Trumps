@@ -6,8 +6,8 @@ import TopTrumpsService from './services/TopTrumpsService'
 
 function App() {
   const [cards, setCards] = useState([])
-  const [player1Deck, setPlayer1Deck] = useState([])
-  const [player2Deck, setPlayer2Deck] = useState([])
+  const [player1Deck, setPlayer1Deck] = useState()
+  const [player2Deck, setPlayer2Deck] = useState()
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))
@@ -25,10 +25,12 @@ function App() {
       playerDeck = player2Deck
       setDeck = setPlayer2Deck
     }
+    if (!playerDeck){setDeck(card)}
+    else{
     const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
     console.log(copyOfPlayerDeck)
     copyOfPlayerDeck.push(card)
-    setDeck(copyOfPlayerDeck)
+    setDeck(copyOfPlayerDeck)}
   }
 
   // Delete a single card from a deck
