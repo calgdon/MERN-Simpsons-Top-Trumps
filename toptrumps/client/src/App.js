@@ -26,6 +26,7 @@ function App() {
       setDeck = setPlayer2Deck
     }
     const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck)
+    console.log(copyOfPlayerDeck)
     copyOfPlayerDeck.push(card)
     setDeck(copyOfPlayerDeck)
   }
@@ -48,24 +49,6 @@ function App() {
     setDeck(copyOfPlayerDeck)
   }
 
-  // shuffle main deck
-
-  // const shuffleDeck = () => {
-  //   let copyOfCards = cards.map((cardInDeck) => cardInDeck)
-  //   let currentIndex = copyOfCards.length,
-  //     randomIndex
-  //   while (currentIndex != 0) {
-  //     randomIndex = Math.floor(Math.random() * currentIndex)
-  //     currentIndex--
-  //     ;[copyOfCards[currentIndex], copyOfCards[randomIndex]] = [
-  //       copyOfCards[randomIndex],
-  //       copyOfCards[currentIndex],
-  //     ]
-  //   }
-  //   setCards(copyOfCards)
-  // }
-
-
   // Shuffle main deck
 
   const shuffleDeck = () => {
@@ -73,10 +56,30 @@ function App() {
   const shuffledDeck = copyOfCards.sort(() => Math.random() - 0.5)
   setCards(shuffledDeck)
   }
- 
+
+  // Deal deck of cards
+
+  const dealDeck = () => {
+    let playerAssignment = 0
+    let dealerCards = [[],[]]
+    cards.forEach((card)=>{
+      let playerNumber = (playerAssignment%2)
+      dealerCards[playerNumber].push(card)
+      playerAssignment += 1
+    })
+    addCardToDeck(dealerCards[0],1)
+    addCardToDeck(dealerCards[1],2)
+  }
+
+
+
+
+
+
+  // Testing of functions
 
   const handleClickAdd = () => {
-    addCardToDeck(cards[0], 1)
+    addCardToDeck(cards[5], 1)
   }
 
   const handleClickDelete = () => {
@@ -87,6 +90,12 @@ function App() {
     shuffleDeck()
   }
 
+  const handleClickDeal = () => {
+    dealDeck()
+  }
+
+
+
   // addCardToDeck(cards[0], 1)
 
   return (
@@ -95,6 +104,7 @@ function App() {
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
       <button onClick={handleClickShuffle}>TESTING SHUFFLE</button>
+      <button onClick={handleClickDeal}>TESTING DEAL</button>
 
       <ViewCardsPage cards={cards} />
     </>
