@@ -2,17 +2,17 @@ import { useState } from "react"
 import TopTrumpsService from "../services/TopTrumpsService"
 
 
-const CardForm = ({addCard}) => {
+const CardForm = ({addNewCard}) => {
 
   const [formData, setFromData] = useState({
     Individual: "",
-    MostLovable: null,
+    "Most Lovable": null,
     Smartest: null,
     Fattest: null,
-    BiggestNerd: null,
-    GreatestAnarchist: null,
-    WalkOfFameRating: null,
-    ImageUrl: ""
+    "Biggest Nerd": null,
+    "Greatest Anarchist": null,
+    "Walk of Fame Rating": null,
+    "img_url": ""
   })
 
   const onChange = (e) =>  {
@@ -23,33 +23,32 @@ const CardForm = ({addCard}) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    TopTrumpsService.addTopTrump(formData).then((data) => {
-      addCard(data)
-    })
-
-    setFromData({
+    addNewCard(formData)
+    setFromData(
+      {
       Individual: "",
-      MostLovable: null,
-      Smartest: null,
-      Fattest: null,
-      BiggestNerd: null,
-      GreatestAnarchist: null,
-      WalkOfFameRating: null,
-      ImageUrl: ""
-    })
-  }
+      "Most Lovable": "",
+      Smartest: "",
+      Fattest: "",
+      "Biggest Nerd": "",
+      "Greatest Anarchist": "",
+      "Walk of Fame Rating": "",
+      "img_url": ""
+      }
+    )
+    }
   
   return (
-    <div className="checkinformwhole">
+    <div className="card-whole">
       <form onSubmit={onSubmit}>
         <h2>Create Guest:</h2>
         <div className="formwrap">
-            <label htmlFor="name">Individual:</label>
+            <label htmlFor="Individual">Individual:</label>
             <input
                   onChange={onChange}
                   type="text"
-                  name="individual"
-                  id="individual"
+                  name="Individual"
+                  id="Individual"
                   required
                   value={formData.Individual}
             />
@@ -57,19 +56,19 @@ const CardForm = ({addCard}) => {
         </div>
 
         <div className="formwrap">
-            <label htmlFor="name">Most Lovable:</label>
+            <label htmlFor="MostLovable">Most Lovable:</label>
             <input
                   onChange={onChange}
                   type="number"
                   name="Most Lovable"
                   id="Most Lovable"
                   required
-                  value={formData.MostLovable}
+                  value={formData["Most Lovable"]}
             />
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">Smartest:</label>
+            <label htmlFor="Smartest">Smartest:</label>
             <input
                   onChange={onChange}
                   type="number"
@@ -81,7 +80,7 @@ const CardForm = ({addCard}) => {
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">Fattest:</label>
+            <label htmlFor="Fattest">Fattest:</label>
             <input
                   onChange={onChange}
                   type="number"
@@ -93,50 +92,50 @@ const CardForm = ({addCard}) => {
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">Biggest Nerd:</label>
+            <label htmlFor="BiggestNerd">Biggest Nerd:</label>
             <input
                   onChange={onChange}
                   type="number"
                   name="Biggest Nerd"
                   id="Biggest Nerd"
                   required
-                  value={formData.BiggestNerd}
+                  value={formData["Biggest Nerd"]}
             />
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">Greatest Anarchist:</label>
+            <label htmlFor="GreatestAnarchist">Greatest Anarchist:</label>
             <input
                   onChange={onChange}
                   type="number"
                   name="Greatest Anarchist"
                   id="Greatest Anarchist"
                   required
-                  value={formData.GreatestAnarchist}
+                  value={formData["Greatest Anarchist"]}
             />
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">Walk of Fame Rating:</label>
+            <label htmlFor="WalkOfFameRating">Walk of Fame Rating:</label>
             <input
                   onChange={onChange}
                   type="number"
                   name="Walk of Fame Rating"
                   id="Walk of Fame Rating"
                   required
-                  value={formData.WalkOfFameRating}
+                  value={formData["Walk of Fame Rating"]}
             />
             
         </div>
         <div className="formwrap">
-            <label htmlFor="name">ImageUrl:</label>
+            <label htmlFor="img_url">ImageUrl:</label>
             <input
                   onChange={onChange}
                   type="text"
-                  name="ImageUrl"
-                  id="ImageUrl"
+                  name="img_url"
+                  id="img_url"
                   required
-                  value={formData.ImageUrl}
+                  value={formData["img_url"]}
             />
             
         </div>

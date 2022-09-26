@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, createRoutesFromChildren } from 'react-router-dom'
 import './App.css'
 import ViewCardsPage from './Containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
@@ -17,8 +17,7 @@ function App() {
   let [player1Card, setPlayer1Card] = useState();
   let [player2Card, setPlayer2Card] = useState();
   let [winner, setWinner] = useState(null);
-  // let player1Deck =[]
-  // let player2Deck = []
+
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards));
@@ -188,8 +187,6 @@ function App() {
   const playGameRound = (attribute) => {
     const player1Deck = player1DeckState.map(card=>card)
     const player2Deck = player2DeckState.map(card=>card)
-    console.log("player1Deck",player1Deck)
-    console.log("player2Deck",player2Deck)
     if (controllingPlayer == 1) {
       if (player1Card[attribute] > player2Card[attribute]) {
         player1Deck.push(...[player1Card, player2Card]);
@@ -204,7 +201,14 @@ function App() {
         player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1);
       }
     }
-    selectCards(player1Deck,player2Deck)
+    if (player1Deck.length==0){
+      return setWinner(1)
+    }
+    else if (player2Deck.length==0) {
+      return setWinner(2)
+    } else {
+      selectCards(player1Deck,player2Deck)      
+    }
   }
 
   const handleClickAdd = () => {
@@ -213,7 +217,8 @@ function App() {
   };
 
   const handleClickDelete = () => {
-    deleteCardFromDeck(player1Deck[0], 1);
+    deleteCardFromDeck(1)
+    deleteCardFromDeck(2)
   };
 
   const handleClickShuffle = () => {
@@ -243,13 +248,18 @@ function App() {
 
   // addCardToDeck(cards[0], 1)
 
+  const addNewCard = (card) => {
+    TopTrumpsService.addTopTrump(card)
+    .then(newCard => setCards([...cards, newCard]))
+  }
+
   return (
     <>
       <Router>
         <Routes>
           <Route exact path='/' element={<Title cards={cards} />} />
-          <Route path="/play" element={<GamePage />} />
-          <Route path="/cards" element={<ViewCardsPage cards={cards} />} />
+          <Route path="/cards" element={<ViewCardsPage cards={cards} addNewCard={addNewCard} />} />
+          <Route path="/play" element={<GamePage cards={cards} playGameRound={playGameRound} setupGame={setupGame}/>} />
         </Routes>
       </Router>
 
