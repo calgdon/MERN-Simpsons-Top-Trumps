@@ -1,28 +1,34 @@
-
-import React from 'react'
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, createRoutesFromChildren } from 'react-router-dom'
-import './App.css'
-import ViewCardsPage from './containers/ViewCardsPage'
-import TopTrumpsService from './services/TopTrumpsService'
-import Title from './components/Title'
-import GamePage from './containers/GamePage'
+import React from "react";
+import { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  createRoutesFromChildren,
+} from "react-router-dom";
+import "./App.css";
+import ViewCardsPage from "./containers/ViewCardsPage";
+import TopTrumpsService from "./services/TopTrumpsService";
+import Title from "./components/Title";
+import GamePage from "./containers/GamePage";
 
 function App() {
   // variable setup
   const [cards, setCards] = useState([]);
-  const [player1DeckState,setPlayer1DeckState] = useState()
-  const [player2DeckState,setPlayer2DeckState] = useState()
+  const [player1DeckState, setPlayer1DeckState] = useState();
+  const [player2DeckState, setPlayer2DeckState] = useState();
   let [controllingPlayer, setControllingPlayer] = useState(1);
   let [player1Card, setPlayer1Card] = useState();
   let [player2Card, setPlayer2Card] = useState();
   let [winner, setWinner] = useState(null);
 
-
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards));
   }, []);
 
+  useEffect(()=>{
+    setupGame()
+  },[cards])
 
   // // add an array of cards to a players deck without clearing existing cards. Have to pass in actual player Number
 
@@ -68,7 +74,7 @@ function App() {
 
   // Delete a single card from a deck
 
-  const deleteCardFromDeck = (deck,playerNumber) => {
+  const deleteCardFromDeck = (deck, playerNumber) => {
     const copyOfPlayerDeck = deck.map((cardInDeck) => cardInDeck);
     copyOfPlayerDeck.splice(0, 1);
     if (playerNumber === 1) {
@@ -76,7 +82,6 @@ function App() {
     } else {
       setPlayer2DeckState(copyOfPlayerDeck);
     }
-    
   };
 
   // Shuffle main deck
@@ -103,60 +108,57 @@ function App() {
 
   // GAME MECHANICS
 
-
-
   // assign selected cards
 
   const selectCards = (player1Deck, player2Deck) => {
     setPlayer1Card(player1Deck[0]);
-    console.log(player1Deck)
-    deleteCardFromDeck(player1Deck,1);
+    console.log(player1Deck);
+    deleteCardFromDeck(player1Deck, 1);
     setPlayer2Card(player2Deck[0]);
-    deleteCardFromDeck(player2Deck,2);
-    console.log(player2Deck)
-
+    deleteCardFromDeck(player2Deck, 2);
+    console.log(player2Deck);
   };
 
   // Comparison function
 
-// const decideWinner=(attribute) =>{
-//     if (controllingPlayer == 1) {
-//       if (player1Card[attribute] > player2Card[attribute]) {
-//         addCardToDeck([player1Card, player2Card], 1);
-//         return 1
-//       } else {
-//         addCardToDeck([player1Card, player2Card], 2), setControllingPlayer(2);
-//         return 2
-//       }
-//     }
-//     if (controllingPlayer == 2) {
-//       if (player2Card[attribute] > player1Card[attribute]) {
-//         addCardToDeck([player2Card, player1Card], 2);
-//         return 2
-//       } else {
-//         addCardToDeck([player2Card, player1Card], 1), setControllingPlayer(1);
-//         return 1
-//       }
-//     }
-//   };
+  // const decideWinner=(attribute) =>{
+  //     if (controllingPlayer == 1) {
+  //       if (player1Card[attribute] > player2Card[attribute]) {
+  //         addCardToDeck([player1Card, player2Card], 1);
+  //         return 1
+  //       } else {
+  //         addCardToDeck([player1Card, player2Card], 2), setControllingPlayer(2);
+  //         return 2
+  //       }
+  //     }
+  //     if (controllingPlayer == 2) {
+  //       if (player2Card[attribute] > player1Card[attribute]) {
+  //         addCardToDeck([player2Card, player1Card], 2);
+  //         return 2
+  //       } else {
+  //         addCardToDeck([player2Card, player1Card], 1), setControllingPlayer(1);
+  //         return 1
+  //       }
+  //     }
+  //   };
 
   // this is what happens when you click start game
 
-//   const gameplaySetup = () => {
-//     shuffleDeck();
-//   };
+  //   const gameplaySetup = () => {
+  //     shuffleDeck();
+  //   };
 
-// async function gameplayLoop  (attribute) {
-//     const result = await decideWinner(attribute);
-//     console.log(result)
-//     if (player1Deck.length === cards.length) {
-//       setWinner(1);
-//     } else if (player2Deck.length === cards.length) {
-//       setWinner(2);
-//     } else {
-//       selectCards();
-//     }
-//   };
+  // async function gameplayLoop  (attribute) {
+  //     const result = await decideWinner(attribute);
+  //     console.log(result)
+  //     if (player1Deck.length === cards.length) {
+  //       setWinner(1);
+  //     } else if (player2Deck.length === cards.length) {
+  //       setWinner(2);
+  //     } else {
+  //       selectCards();
+  //     }
+  //   };
 
   // automatically deal new hand when the master deck is shuffled
 
@@ -166,50 +168,51 @@ function App() {
 
   // New Integrated Functions
 
-  const setupGame = ()=>{
+  const setupGame = () => {
     let copyOfCards = cards.map((cardInDeck) => cardInDeck);
     const shuffledDeck = copyOfCards.sort(() => Math.random() - 0.5);
-        let playerAssignment = 0;
+    let playerAssignment = 0;
     let dealerCards = [[], []];
     shuffledDeck.forEach((card) => {
       let playerNumber = playerAssignment % 2;
       dealerCards[playerNumber].push(card);
       playerAssignment += 1;
     });
-    console.log(shuffledDeck)
-    const player1Deck =[...dealerCards[0]];
-    const player2Deck =[...dealerCards[1]];
-    console.log(player1Deck)
-    console.log(player2Deck)
-    selectCards(player1Deck, player2Deck)
-  }
+    console.log(shuffledDeck);
+    const player1Deck = [...dealerCards[0]];
+    const player2Deck = [...dealerCards[1]];
+    console.log(player1Deck);
+    console.log(player2Deck);
+    selectCards(player1Deck, player2Deck);
+  };
 
   const playGameRound = (attribute) => {
-    const player1Deck = player1DeckState.map(card=>card)
-    const player2Deck = player2DeckState.map(card=>card)
+    const player1Deck = player1DeckState.map((card) => card);
+    const player2Deck = player2DeckState.map((card) => card);
     if (controllingPlayer == 1) {
       if (player1Card[attribute] > player2Card[attribute]) {
         player1Deck.push(...[player1Card, player2Card]);
       } else {
-        player2Deck.push(...[player1Card, player2Card]), setControllingPlayer(2);
+        player2Deck.push(...[player1Card, player2Card]),
+          setControllingPlayer(2);
       }
     }
     if (controllingPlayer == 2) {
       if (player2Card[attribute] > player1Card[attribute]) {
         player2Deck.push(...[player2Card, player1Card]);
       } else {
-        player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1);
+        player1Deck.push(...[player2Card, player1Card]),
+          setControllingPlayer(1);
       }
     }
-    if (player1Deck.length==0){
-      return setWinner(1)
-    }
-    else if (player2Deck.length==0) {
-      return setWinner(2)
+    if (player1Deck.length == 0) {
+      return setWinner(1);
+    } else if (player2Deck.length == 0) {
+      return setWinner(2);
     } else {
-      selectCards(player1Deck,player2Deck)      
+      selectCards(player1Deck, player2Deck);
     }
-  }
+  };
 
   // const handleClickAdd = () => {
   //   addCardToDeck(cards[1], 1);
@@ -245,24 +248,39 @@ function App() {
   //   playGameRound("Fattest");
   // };
 
-
   // addCardToDeck(cards[0], 1)
 
   const addNewCard = (card) => {
-    TopTrumpsService.addTopTrump(card)
-    .then(newCard => setCards([...cards, newCard]))
-  }
+    TopTrumpsService.addTopTrump(card).then((newCard) =>
+      setCards([...cards, newCard])
+    );
+  };
 
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path='/' element={<Title cards={cards} />} />
-          <Route path="/cards" element={<ViewCardsPage cards={cards} addNewCard={addNewCard} />} />
-          <Route path="/play" element={<GamePage cards={cards} playGameRound={playGameRound} setupGame={setupGame}/>} />
+          <Route exact path="/" element={<Title cards={cards} />} />
+          <Route
+            path="/cards"
+            element={<ViewCardsPage cards={cards} addNewCard={addNewCard} />}
+          />
+          <Route
+            path="/play"
+            element={
+              <GamePage
+                cards={cards}
+                playGameRound={playGameRound}
+                player1Card={player1Card}
+                player2Card={player2Card}
+                winner={winner}
+                controllingPlayer={controllingPlayer}
+              />
+            }
+          />
         </Routes>
       </Router>
-{/* 
+      {/* 
       <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
