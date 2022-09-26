@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import './App.css'
-import ViewCardsPage from './containers/ViewCardsPage'
+import ViewCardsPage from './Containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
 
 function App() {
