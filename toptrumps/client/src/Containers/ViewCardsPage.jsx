@@ -1,6 +1,6 @@
 import React from 'react'
-import CardForm from '../Components/CardForm'
-import CardGrid from '../Components/CardGrid'
+import CardForm from '../components/CardForm'
+import CardGrid from '../components/CardGrid'
 
 const ViewCardsPage = ({cards}) => {
   return (
