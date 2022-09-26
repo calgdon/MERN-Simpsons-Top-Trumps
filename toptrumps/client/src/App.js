@@ -1,8 +1,12 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import "./App.css";
-import ViewCardsPage from "./containers/ViewCardsPage";
-import TopTrumpsService from "./services/TopTrumpsService";
+
+import React from 'react'
+import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './App.css'
+import ViewCardsPage from './Containers/ViewCardsPage'
+import TopTrumpsService from './services/TopTrumpsService'
+import Title from './components/Title'
+import GamePage from './containers/GamePage'
 
 function App() {
   // variable setup
@@ -207,7 +211,6 @@ function App() {
     selectCards()
   }
 
-
   const handleClickAdd = () => {
     addCardToDeck(cards[1], 1);
     addCardToDeck(cards[3], 2);
@@ -241,11 +244,20 @@ function App() {
     playGameRound("Fattest");
   };
 
+
   // addCardToDeck(cards[0], 1)
 
   return (
     <>
-      <h1>Welcome to TopTrumps</h1>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Title cards={cards} />} />
+          <Route path="/play" element={<GamePage />} />
+          <Route path="/cards" element={<ViewCardsPage cards={cards} />} />
+        </Routes>
+      </Router>
+
+      {/* <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
       <button onClick={handleClickShuffle}>TESTING SHUFFLE</button>
@@ -255,7 +267,7 @@ function App() {
       <button onClick={handleClickSetup}>TESTING Setup</button>
       <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
-      <ViewCardsPage cards={cards} />
+      <ViewCardsPage cards={cards} /> */}
     </>
   );
 }
