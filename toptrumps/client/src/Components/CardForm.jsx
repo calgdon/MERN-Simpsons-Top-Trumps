@@ -39,7 +39,7 @@ const CardForm = ({addNewCard}) => {
     }
   
   return (
-    <div className="checkinformwhole">
+    <div className="card-whole">
       <form onSubmit={onSubmit}>
         <h2>Create Guest:</h2>
         <div className="formwrap">
