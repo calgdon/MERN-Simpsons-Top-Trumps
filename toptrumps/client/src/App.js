@@ -21,6 +21,8 @@ function App() {
   let [player1Card, setPlayer1Card] = useState();
   let [player2Card, setPlayer2Card] = useState();
   let [winner, setWinner] = useState(null);
+  const [player1Score, setPlayer1Score] = useState(0)
+  const [player2Score, setPlayer2Score] = useState(0)
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards));
@@ -184,6 +186,7 @@ function App() {
     console.log(player1Deck);
     console.log(player2Deck);
     selectCards(player1Deck, player2Deck);
+    setWinner(null)
   };
 
   const playGameRound = (attribute) => {
@@ -206,9 +209,11 @@ function App() {
       }
     }
     if (player1Deck.length == 0) {
-      return setWinner(1);
-    } else if (player2Deck.length == 0) {
+      setPlayer2Score(player2Score + 1)
       return setWinner(2);
+    } else if (player2Deck.length == 0) {
+      setPlayer1Score(player1Score + 1)
+      return setWinner(1);
     } else {
       selectCards(player1Deck, player2Deck);
     }
@@ -275,6 +280,10 @@ function App() {
                 player2Card={player2Card}
                 winner={winner}
                 controllingPlayer={controllingPlayer}
+                setWinner={setWinner}
+                setupGame={setupGame}
+                player1Score={player1Score}
+                player2Score={player2Score}
               />
             }
           />
