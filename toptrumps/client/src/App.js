@@ -17,8 +17,8 @@ function App() {
   let [player1Card, setPlayer1Card] = useState();
   let [player2Card, setPlayer2Card] = useState();
   let [winner, setWinner] = useState(null);
-  let player1Deck =[]
-  let player2Deck = []
+  // let player1Deck =[]
+  // let player2Deck = []
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards));
@@ -69,19 +69,15 @@ function App() {
 
   // Delete a single card from a deck
 
-  const deleteCardFromDeck = (playerNumber) => {
-    let playerDeck = undefined;
-    let setDeck = undefined;
-    if (playerNumber === 1) {
-      playerDeck = player1Deck;
-      setDeck = setPlayer1DeckState;
-    } else {
-      playerDeck = player2Deck;
-      setDeck = setPlayer2DeckState;
-    }
-    const copyOfPlayerDeck = playerDeck.map((cardInDeck) => cardInDeck);
+  const deleteCardFromDeck = (deck,playerNumber) => {
+    const copyOfPlayerDeck = deck.map((cardInDeck) => cardInDeck);
     copyOfPlayerDeck.splice(0, 1);
-    setDeck(copyOfPlayerDeck);
+    if (playerNumber === 1) {
+      setPlayer1DeckState(copyOfPlayerDeck);
+    } else {
+      setPlayer2DeckState(copyOfPlayerDeck);
+    }
+    
   };
 
   // Shuffle main deck
@@ -112,12 +108,12 @@ function App() {
 
   // assign selected cards
 
-  const selectCards = () => {
+  const selectCards = (player1Deck, player2Deck) => {
     setPlayer1Card(player1Deck[0]);
     console.log(player1Deck)
-    deleteCardFromDeck(1);
+    deleteCardFromDeck(player1Deck,1);
     setPlayer2Card(player2Deck[0]);
-    deleteCardFromDeck(2);
+    deleteCardFromDeck(player2Deck,2);
     console.log(player2Deck)
 
   };
@@ -182,16 +178,16 @@ function App() {
       playerAssignment += 1;
     });
     console.log(shuffledDeck)
-    player1Deck.push(...dealerCards[0]);
-    player2Deck.push(...dealerCards[1]);
+    const player1Deck =[...dealerCards[0]];
+    const player2Deck =[...dealerCards[1]];
     console.log(player1Deck)
     console.log(player2Deck)
-    selectCards()
+    selectCards(player1Deck, player2Deck)
   }
 
   const playGameRound = (attribute) => {
-    player1Deck = player1DeckState.map(card=>card)
-    player2Deck = player2DeckState.map(card=>card)
+    const player1Deck = player1DeckState.map(card=>card)
+    const player2Deck = player2DeckState.map(card=>card)
     console.log("player1Deck",player1Deck)
     console.log("player2Deck",player2Deck)
     if (controllingPlayer == 1) {
@@ -208,7 +204,7 @@ function App() {
         player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1);
       }
     }
-    selectCards()
+    selectCards(player1Deck,player2Deck)
   }
 
   const handleClickAdd = () => {
@@ -257,7 +253,7 @@ function App() {
         </Routes>
       </Router>
 
-      {/* <h1>Welcome to TopTrumps</h1>
+      <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
       <button onClick={handleClickShuffle}>TESTING SHUFFLE</button>
@@ -267,7 +263,7 @@ function App() {
       <button onClick={handleClickSetup}>TESTING Setup</button>
       <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
-      <ViewCardsPage cards={cards} /> */}
+      <ViewCardsPage cards={cards} />
     </>
   );
 }
