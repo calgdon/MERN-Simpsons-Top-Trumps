@@ -14,15 +14,15 @@ const GamePage = ({
   winner,
   controllingPlayer,
   setWinner,
-  setupGame
+  setupGame,
+  player1Score,
+  player2Score
 }) => {
   const playerCard = controllingPlayer == 1 ? player1Card : player2Card
 
   const handleRerunSetup =() => {
     setupGame()
   }
-
-
 
   const winnerRender = () => {
     if (!winner) {
@@ -32,6 +32,7 @@ const GamePage = ({
         <div class='popup'>
           <span className='popuptext' id='myPopup'>
             <h2>WE HAVE A WINNER and it's player {winner}</h2>
+            <h3>Player 1: {player1Score} - Player 2: {player2Score} </h3>
             <Link to='/'>
               <button onClick={handleRerunSetup}>Return Home</button>
             </Link>
@@ -47,9 +48,6 @@ const GamePage = ({
   const handleWinnerClick = () => {
     setWinner(1)
   }
-
-
-
 
 
   return (

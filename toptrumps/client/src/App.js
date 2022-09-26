@@ -282,6 +282,8 @@ function App() {
                 controllingPlayer={controllingPlayer}
                 setWinner={setWinner}
                 setupGame={setupGame}
+                player1Score={player1Score}
+                player2Score={player2Score}
               />
             }
           />
