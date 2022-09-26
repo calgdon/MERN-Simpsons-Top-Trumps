@@ -2,12 +2,13 @@ import React from 'react'
 import CardForm from '../components/CardForm'
 import CardGrid from '../components/CardGrid'
 
-const ViewCardsPage = ({cards}) => {
+const ViewCardsPage = ({cards, addNewCard}) => {
   return (
     <>
     <div>ViewCardsPage</div>
-    <CardGrid cards={cards}/>
-    {/* <CardForm addCard={addCard}/> */}
+    <CardForm addNewCard={addNewCard}/>
+    {/* <CardGrid cards={cards}/> */}
+
     </>
   )
 }
