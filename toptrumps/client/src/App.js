@@ -3,10 +3,10 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, createRoutesFromChildren } from 'react-router-dom'
 import './App.css'
-import ViewCardsPage from './containers/ViewCardsPage'
+import ViewCardsPage from './Containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
-import Title from './components/Title'
-import GamePage from './containers/GamePage'
+import Title from './Components/Title'
+import GamePage from './Containers/GamePage'
 
 function App() {
   // variable setup
