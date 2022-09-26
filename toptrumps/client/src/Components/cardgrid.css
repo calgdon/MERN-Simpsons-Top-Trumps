@@ -1,7 +1,11 @@
+.CardGrid{
+    width: 50%;
+}
+
+
 .CardList{
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
     margin: 80px;
     justify-content: center;
     align-content: space-evenly;
