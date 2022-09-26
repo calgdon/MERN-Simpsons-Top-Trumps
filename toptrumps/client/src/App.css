@@ -2,11 +2,11 @@
 .App{
     font: Simpsonfont
 }
-body {
+/* body {
     background-image: url("./images/Springfield_background.png");
     font: Simpsonfont;
 
-}
+} */
 
 .button{
     background-color: rgba(255, 255, 0, 0.643) ;

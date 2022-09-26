@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, createRoutesFromChildren } from 'react-router-dom'
 import './App.css'
 import ViewCardsPage from './containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
@@ -242,13 +242,18 @@ function App() {
 
   // addCardToDeck(cards[0], 1)
 
+  const addNewCard = (card) => {
+    TopTrumpsService.addTopTrump(card)
+    .then(newCard => setCards([...cards, newCard]))
+  }
+
   return (
     <>
       <Router>
         <Routes>
           <Route exact path='/' element={<Title cards={cards} />} />
           <Route path="/play" element={<GamePage />} />
-          <Route path="/cards" element={<ViewCardsPage cards={cards} />} />
+          <Route path="/cards" element={<ViewCardsPage cards={cards} addNewCard={addNewCard} />} />
         </Routes>
       </Router>
 
