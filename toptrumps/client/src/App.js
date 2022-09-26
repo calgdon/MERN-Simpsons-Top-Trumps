@@ -201,10 +201,10 @@ function App() {
         player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1);
       }
     }
-    if (player1Deck===[]){
+    if (player1Deck.length==0){
       return setWinner(1)
     }
-    else if (player2Deck ===[]) {
+    else if (player2Deck.length==0) {
       return setWinner(2)
     } else {
       selectCards(player1Deck,player2Deck)      
@@ -253,7 +253,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Title cards={cards} />} />
-          <Route path="/play" element={<GamePage />} />
+          <Route path="/play" element={<GamePage cards={cards} playGameRound={playGameRound} setupGame={setupGame}/>} />
           <Route path="/cards" element={<ViewCardsPage cards={cards} />} />
         </Routes>
       </Router>
