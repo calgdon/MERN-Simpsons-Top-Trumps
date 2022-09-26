@@ -17,8 +17,7 @@ function App() {
   let [player1Card, setPlayer1Card] = useState();
   let [player2Card, setPlayer2Card] = useState();
   let [winner, setWinner] = useState(null);
-  // let player1Deck =[]
-  // let player2Deck = []
+
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards));
@@ -207,38 +206,38 @@ function App() {
     selectCards(player1Deck,player2Deck)
   }
 
-  const handleClickAdd = () => {
-    addCardToDeck(cards[1], 1);
-    addCardToDeck(cards[3], 2);
-  };
+  // const handleClickAdd = () => {
+  //   addCardToDeck(cards[1], 1);
+  //   addCardToDeck(cards[3], 2);
+  // };
 
-  const handleClickDelete = () => {
-    deleteCardFromDeck(player1Deck[0], 1);
-  };
+  // const handleClickDelete = () => {
+  //   deleteCardFromDeck(player1Deck[0], 1);
+  // };
 
-  const handleClickShuffle = () => {
-    shuffleDeck();
-  };
+  // const handleClickShuffle = () => {
+  //   shuffleDeck();
+  // };
 
-  const handleClickDeal = () => {
-    dealDeck();
-  };
+  // const handleClickDeal = () => {
+  //   dealDeck();
+  // };
 
-  const handleClickSelect = () => {
-    selectCards();
-  };
+  // const handleClickSelect = () => {
+  //   selectCards();
+  // };
 
-  const handleClickDuel = () => {
-    decideWinner("Fattest");
-  };
+  // const handleClickDuel = () => {
+  //   decideWinner("Fattest");
+  // };
 
-  const handleClickSetup = () => {
-    setupGame();
-  };
+  // const handleClickSetup = () => {
+  //   setupGame();
+  // };
 
-  const handleClickGameLoop = () => {
-    playGameRound("Fattest");
-  };
+  // const handleClickGameLoop = () => {
+  //   playGameRound("Fattest");
+  // };
 
 
   // addCardToDeck(cards[0], 1)
@@ -253,7 +252,7 @@ function App() {
         </Routes>
       </Router>
 
-      <h1>Welcome to TopTrumps</h1>
+      {/* <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
       <button onClick={handleClickShuffle}>TESTING SHUFFLE</button>
@@ -263,7 +262,7 @@ function App() {
       <button onClick={handleClickSetup}>TESTING Setup</button>
       <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
-      <ViewCardsPage cards={cards} />
+      <ViewCardsPage cards={cards} /> */}
     </>
   );
 }
