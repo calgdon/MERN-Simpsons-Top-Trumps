@@ -7,7 +7,7 @@ const ViewCardsPage = ({cards}) => {
     <>
     <div>ViewCardsPage</div>
     <CardGrid cards={cards}/>
-    <CardForm/>
+    <CardForm addCard={addCard}/>
     </>
   )
 }

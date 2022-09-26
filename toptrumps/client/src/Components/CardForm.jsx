@@ -38,10 +38,7 @@ const CardForm = ({addCard}) => {
       ImageUrl: ""
     })
   }
-
-
-
-
+  
   return (
     <div className="checkinformwhole">
       <form onSubmit={onSubmit}>
