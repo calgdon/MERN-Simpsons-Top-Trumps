@@ -45,23 +45,23 @@ function App() {
   // };
   // add an array of cards to a players deck clearing existing cards. Have to pass in actual player Number
 
-  const addCardsToDeck = (cards, playerNumber) => {
-    let playerDeck = undefined;
-    if (playerNumber === 1) {
-      playerDeck = player1Deck;
-    } else {
-      playerDeck = player2Deck;
-    }
-    if (!playerDeck) {
-      playerDeck.push(cards);
-    } else {
-      const copyOfPlayerDeck = [];
-      cards.forEach((card) => {
-        copyOfPlayerDeck.push(card);
-      });
-      playerDeck = copyOfPlayerDeck.map(c=>c);
-    }
-  };
+  // const addCardsToDeck = (cards, playerNumber) => {
+  //   let playerDeck = undefined;
+  //   if (playerNumber === 1) {
+  //     playerDeck = player1Deck;
+  //   } else {
+  //     playerDeck = player2Deck;
+  //   }
+  //   if (!playerDeck) {
+  //     playerDeck.push(cards);
+  //   } else {
+  //     const copyOfPlayerDeck = [];
+  //     cards.forEach((card) => {
+  //       copyOfPlayerDeck.push(card);
+  //     });
+  //     playerDeck = copyOfPlayerDeck.map(c=>c);
+  //   }
+  // };
 
   // Delete a single card from a deck
 
@@ -82,25 +82,25 @@ function App() {
 
   // Shuffle main deck
 
-  const shuffleDeck = () => {
-    let copyOfCards = cards.map((cardInDeck) => cardInDeck);
-    const shuffledDeck = copyOfCards.sort(() => Math.random() - 0.5);
-    setCards(shuffledDeck);
-  };
+  // const shuffleDeck = () => {
+  //   let copyOfCards = cards.map((cardInDeck) => cardInDeck);
+  //   const shuffledDeck = copyOfCards.sort(() => Math.random() - 0.5);
+  //   setCards(shuffledDeck);
+  // };
 
   // Deal deck of cards
 
-  const dealDeck = () => {
-    let playerAssignment = 0;
-    let dealerCards = [[], []];
-    cards.forEach((card) => {
-      let playerNumber = playerAssignment % 2;
-      dealerCards[playerNumber].push(card);
-      playerAssignment += 1;
-    });
-    addCardsToDeck(dealerCards[0], 1);
-    addCardsToDeck(dealerCards[1], 2);
-  };
+  // const dealDeck = () => {
+  //   let playerAssignment = 0;
+  //   let dealerCards = [[], []];
+  //   cards.forEach((card) => {
+  //     let playerNumber = playerAssignment % 2;
+  //     dealerCards[playerNumber].push(card);
+  //     playerAssignment += 1;
+  //   });
+  //   addCardsToDeck(dealerCards[0], 1);
+  //   addCardsToDeck(dealerCards[1], 2);
+  // };
 
   // GAME MECHANICS
 
@@ -120,44 +120,44 @@ function App() {
 
   // Comparison function
 
-const decideWinner=(attribute) =>{
-    if (controllingPlayer == 1) {
-      if (player1Card[attribute] > player2Card[attribute]) {
-        addCardToDeck([player1Card, player2Card], 1);
-        return 1
-      } else {
-        addCardToDeck([player1Card, player2Card], 2), setControllingPlayer(2);
-        return 2
-      }
-    }
-    if (controllingPlayer == 2) {
-      if (player2Card[attribute] > player1Card[attribute]) {
-        addCardToDeck([player2Card, player1Card], 2);
-        return 2
-      } else {
-        addCardToDeck([player2Card, player1Card], 1), setControllingPlayer(1);
-        return 1
-      }
-    }
-  };
+// const decideWinner=(attribute) =>{
+//     if (controllingPlayer == 1) {
+//       if (player1Card[attribute] > player2Card[attribute]) {
+//         addCardToDeck([player1Card, player2Card], 1);
+//         return 1
+//       } else {
+//         addCardToDeck([player1Card, player2Card], 2), setControllingPlayer(2);
+//         return 2
+//       }
+//     }
+//     if (controllingPlayer == 2) {
+//       if (player2Card[attribute] > player1Card[attribute]) {
+//         addCardToDeck([player2Card, player1Card], 2);
+//         return 2
+//       } else {
+//         addCardToDeck([player2Card, player1Card], 1), setControllingPlayer(1);
+//         return 1
+//       }
+//     }
+//   };
 
   // this is what happens when you click start game
 
-  const gameplaySetup = () => {
-    shuffleDeck();
-  };
+//   const gameplaySetup = () => {
+//     shuffleDeck();
+//   };
 
-async function gameplayLoop  (attribute) {
-    const result = await decideWinner(attribute);
-    console.log(result)
-    if (player1Deck.length === cards.length) {
-      setWinner(1);
-    } else if (player2Deck.length === cards.length) {
-      setWinner(2);
-    } else {
-      selectCards();
-    }
-  };
+// async function gameplayLoop  (attribute) {
+//     const result = await decideWinner(attribute);
+//     console.log(result)
+//     if (player1Deck.length === cards.length) {
+//       setWinner(1);
+//     } else if (player2Deck.length === cards.length) {
+//       setWinner(2);
+//     } else {
+//       selectCards();
+//     }
+//   };
 
   // automatically deal new hand when the master deck is shuffled
 
@@ -165,7 +165,7 @@ async function gameplayLoop  (attribute) {
   //   dealDeck();
   // }, [cards]);
 
-  // New Integrated Functions by Ben
+  // New Integrated Functions
 
   const setupGame = ()=>{
     let copyOfCards = cards.map((cardInDeck) => cardInDeck);
@@ -183,32 +183,30 @@ async function gameplayLoop  (attribute) {
     console.log(player1Deck)
     console.log(player2Deck)
     selectCards()
-
   }
 
+  const playGameRound = (attribute) => {
+    player1Deck = player1DeckState.map(card=>card)
+    player2Deck = player2DeckState.map(card=>card)
+    console.log("player1Deck",player1Deck)
+    console.log("player2Deck",player2Deck)
+    if (controllingPlayer == 1) {
+      if (player1Card[attribute] > player2Card[attribute]) {
+        player1Deck.push(...[player1Card, player2Card]);
+      } else {
+        player2Deck.push(...[player1Card, player2Card]), setControllingPlayer(2);
+      }
+    }
+    if (controllingPlayer == 2) {
+      if (player2Card[attribute] > player1Card[attribute]) {
+        player2Deck.push(...[player2Card, player1Card]);
+      } else {
+        player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1);
+      }
+    }
+    selectCards()
+  }
 
-  // play game function
-
-  // set up
-
-  // play game
-  // shuffle cards
-  // deal cards
-
-  // gameplay
-
-  // draw card
-  // select attribute
-  // decide winner (distributes cards)
-  // check deck matches masterdeck
-
-  // end state
-
-  // displays winner
-
-  // End of game
-
-  // Testing of functions
 
   const handleClickAdd = () => {
     addCardToDeck(cards[1], 1);
@@ -240,7 +238,7 @@ async function gameplayLoop  (attribute) {
   };
 
   const handleClickGameLoop = () => {
-    gameplayLoop("Fattest");
+    playGameRound("Fattest");
   };
 
   // addCardToDeck(cards[0], 1)
