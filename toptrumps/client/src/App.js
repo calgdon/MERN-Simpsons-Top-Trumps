@@ -1,8 +1,11 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import ViewCardsPage from './containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
+import Title from './components/Title'
+import GamePage from './containers/GamePage'
 
 function App() {
   const [cards, setCards] = useState([])
@@ -110,16 +113,14 @@ function App() {
       }
     }
   }
-  
+
   // this is what happens when you click start game
 
   const gameplaySetup = () => {
     shuffleDeck()
     dealDeck()
     selectCards()
-    }
-
-
+  }
 
   const gameplayLoop = (attribute) => {
     decideWinner(attribute)
@@ -127,10 +128,10 @@ function App() {
       setWinner(1)
     } else if (player2Deck.length === cards.length) {
       setWinner(2)
+    } else {
+      selectCards()
     }
-    else {selectCards()}
   }
-
 
   // play game function
 
@@ -181,20 +182,26 @@ function App() {
   }
 
   const handleClickPlay = () => {
-      gameplaySetup()
+    gameplaySetup()
   }
 
   const handleClickGameLoop = () => {
-        gameplayLoop("Fattest")
+    gameplayLoop('Fattest')
   }
-
-
 
   // addCardToDeck(cards[0], 1)
 
   return (
     <>
-      <h1>Welcome to TopTrumps</h1>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Title cards={cards} />} />
+          <Route path="/play" element={<GamePage />} />
+          <Route path="/cards" element={<ViewCardsPage cards={cards} />} />
+        </Routes>
+      </Router>
+
+      {/* <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
       <button onClick={handleClickShuffle}>TESTING SHUFFLE</button>
@@ -204,7 +211,7 @@ function App() {
       <button onClick={handleClickPlay}>TESTING Play</button>
       <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
-      <ViewCardsPage cards={cards} />
+      <ViewCardsPage cards={cards} /> */}
     </>
   )
 }
