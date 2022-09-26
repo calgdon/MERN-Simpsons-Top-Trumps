@@ -1,5 +1,6 @@
 import React from "react";
 import CardDetail from "./CardDetail";
+import "./cardgrid.css"
 
 const CardGrid = ({ cards }) => {
   // if (!cards) return <h2>Loading...</h2>;
@@ -10,8 +11,9 @@ const CardGrid = ({ cards }) => {
 
   return (
     <>
-      <div>CardGrid</div>
-      <ul>{CardList}</ul>
+      <div className="CardGrid">
+      <ul className="CardList">{CardList}</ul>
+      </div>
     </>
   );
 };
