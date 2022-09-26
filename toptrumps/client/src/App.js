@@ -3,10 +3,10 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, createRoutesFromChildren } from 'react-router-dom'
 import './App.css'
-import ViewCardsPage from './Containers/ViewCardsPage'
+import ViewCardsPage from './containers/ViewCardsPage'
 import TopTrumpsService from './services/TopTrumpsService'
-import Title from './Components/Title'
-import GamePage from './Containers/GamePage'
+import Title from './components/Title'
+import GamePage from './containers/GamePage'
 
 function App() {
   // variable setup
@@ -211,39 +211,39 @@ function App() {
     }
   }
 
-  const handleClickAdd = () => {
-    addCardToDeck(cards[1], 1);
-    addCardToDeck(cards[3], 2);
-  };
+  // const handleClickAdd = () => {
+  //   addCardToDeck(cards[1], 1);
+  //   addCardToDeck(cards[3], 2);
+  // };
 
-  const handleClickDelete = () => {
-    deleteCardFromDeck(1)
-    deleteCardFromDeck(2)
-  };
+  // const handleClickDelete = () => {
+  //   deleteCardFromDeck(1)
+  //   deleteCardFromDeck(2)
+  // };
 
-  const handleClickShuffle = () => {
-    shuffleDeck();
-  };
+  // const handleClickShuffle = () => {
+  //   shuffleDeck();
+  // };
 
-  const handleClickDeal = () => {
-    dealDeck();
-  };
+  // const handleClickDeal = () => {
+  //   dealDeck();
+  // };
 
-  const handleClickSelect = () => {
-    selectCards();
-  };
+  // const handleClickSelect = () => {
+  //   selectCards();
+  // };
 
-  const handleClickDuel = () => {
-    decideWinner("Fattest");
-  };
+  // const handleClickDuel = () => {
+  //   decideWinner("Fattest");
+  // };
 
-  const handleClickSetup = () => {
-    setupGame();
-  };
+  // const handleClickSetup = () => {
+  //   setupGame();
+  // };
 
-  const handleClickGameLoop = () => {
-    playGameRound("Fattest");
-  };
+  // const handleClickGameLoop = () => {
+  //   playGameRound("Fattest");
+  // };
 
 
   // addCardToDeck(cards[0], 1)
@@ -262,7 +262,7 @@ function App() {
           <Route path="/play" element={<GamePage cards={cards} playGameRound={playGameRound} setupGame={setupGame}/>} />
         </Routes>
       </Router>
-
+{/* 
       <h1>Welcome to TopTrumps</h1>
       <button onClick={handleClickAdd}>TESTING ADD</button>
       <button onClick={handleClickDelete}>TESTING DELETE</button>
@@ -273,7 +273,7 @@ function App() {
       <button onClick={handleClickSetup}>TESTING Setup</button>
       <button onClick={handleClickGameLoop}>TESTING Loop</button>
 
-      <ViewCardsPage cards={cards} />
+      <ViewCardsPage cards={cards} /> */}
     </>
   );
 }

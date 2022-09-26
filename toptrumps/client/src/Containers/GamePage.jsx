@@ -1,5 +1,5 @@
 import React from "react";
-import CardDetail from "../Components/CardDetail";
+import CardDetail from "../components/CardDetail";
 
 const GamePage = () => {
   return (
