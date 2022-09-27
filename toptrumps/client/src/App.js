@@ -270,7 +270,6 @@ function App() {
   return (
     <>
       <Router>
-      <NavBar/>
         <Routes>
           <Route exact path='/' element={<Title cards={cards} />} />
           <Route
