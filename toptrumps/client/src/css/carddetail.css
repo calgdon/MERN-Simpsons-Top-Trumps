@@ -1,8 +1,3 @@
-body {
-    font-family: simpsonsfont;
-    src: url(http://fonts.cdnfonts.com/css/simpsonfont);
-}
-
 .card-detail{
     width: 200px;
     border: 5px solid black;
@@ -10,21 +5,27 @@ body {
     padding: 16px;
     list-style: none;
     list-style-type: none;
-    background-color: yellow;
+    background-color: #f4ca1e;
 
 }
 
+.character-name{
+
+}
 
 
 p{
     border: 5px solid black;
     border-radius: 32px;
     padding: 8px;
+    background-color: #0b31db;
+    color: aliceblue;
 }
 
 .character-image{
     width: 150px;
     height: 180px;
+    margin: 25px;
 }
 
 .character-name{
