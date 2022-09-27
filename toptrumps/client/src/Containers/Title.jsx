@@ -18,6 +18,7 @@ const Title = () => {
   <div className ='flex-container'>
    <div className='title-button'>
    
+
    <Link to="/play">Play</Link>
   
    </div>
