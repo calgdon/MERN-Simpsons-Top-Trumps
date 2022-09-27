@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './title.css'
+import '../css/title.css'
 
 
 const Title = () => {
