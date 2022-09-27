@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/title.css'
+import blah from '../images/a1f115ae1d5262c8db205ffadd918ef8 (1).png'
+
 
 
 const Title = () => {
@@ -23,6 +25,8 @@ const Title = () => {
     <button>
     <Link to="/rules">Rules</Link>
     </button>
+   </div>
+   <img className="Main-logo" src={blah} alt="Simpsons Top Trumps Logo" />
 
     </>
 
