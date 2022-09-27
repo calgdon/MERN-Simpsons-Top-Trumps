@@ -7,14 +7,14 @@ import toptrumpback from "../images/toptrumpback.jpeg";
 const PlayerDeck = ({ deck }) => {
   const deckRender = deck.map(() => {
     return (
-      <li>
+      <li className="playerDeckListItem">
         <img className="trumpCardBack" src={toptrumpback} />
       </li>
     );
   });
   console.log(deckRender)
 
-  return <ul>{deckRender}</ul>;
+  return <ul className="playerDeckList">{deckRender}</ul>;
 };
 
 export default PlayerDeck;
