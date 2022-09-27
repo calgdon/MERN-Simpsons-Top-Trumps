@@ -3,10 +3,22 @@
     top: 80px;
     background-color: #f4ca1e;
     border: 5px solid #000000;
-    height: 264px;
+    height: 425px;
     border-radius: 16px;
     margin-top: 80px;
-    width: 312px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.formwrap{
+    color: #ffffff;
+    background-color: #0b31db;
+    border: 5px solid #000000;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.saveformbutton{
+    margin: 5px;
 }
