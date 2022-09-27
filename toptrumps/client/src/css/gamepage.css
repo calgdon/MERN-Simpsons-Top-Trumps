@@ -14,10 +14,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #0b31db;
-    width: 600px;
-    max-width: 80%;
-    height: 600px;
-    max-height: 80%;
+    width: 900px;
+    /* max-width: 80%; */
+    /* height: 900px; */
+    /* max-height: 80%; */
     border-radius: 25px;
     border: 8px solid #FFD90F;
 
@@ -53,4 +53,8 @@
 
 .modal-dialog {
     pointer-events: all;
+}
+
+#winningCardFlexContainer {
+    display: flex;
 }

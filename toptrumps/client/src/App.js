@@ -25,6 +25,7 @@ function App() {
   let [winner, setWinner] = useState(null)
   const [player1Score, setPlayer1Score] = useState(0)
   const [player2Score, setPlayer2Score] = useState(0)
+  const [cardComparison, setCardComparison] = useState(null)
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))
@@ -293,6 +294,8 @@ function App() {
                 player2Score={player2Score}
                 player1DeckState={player1DeckState}
                 player2DeckState={player2DeckState}
+                cardComparison={cardComparison}
+                setCardComparison={setCardComparison}
               />
             }/>
           <Route path ="/rules" element={<Rules/>}
