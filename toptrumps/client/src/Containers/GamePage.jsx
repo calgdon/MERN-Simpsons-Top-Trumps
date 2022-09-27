@@ -7,6 +7,7 @@ import TopTrumpsService from '../services/TopTrumpsService'
 import toptrumpback from '../images/toptrumpback.jpeg'
 
 import '../css/gamepage.css'
+import PlayerDeck from '../components/PlayerDeck'
 
 const GamePage = ({
   playGameRound,
@@ -17,6 +18,8 @@ const GamePage = ({
   setupGame,
   player1Score,
   player2Score,
+  player1DeckState,
+  player2DeckState
 }) => {
 
   const handleRerunSetup = () => {
@@ -58,7 +61,7 @@ const GamePage = ({
   return (
     <>
     <div id='gameplayWrapper'>
-      <div></div>
+      <div><PlayerDeck deck={player1DeckState}/></div>
       <div className='gridComponent'>
         <GameForm
           card={player1Card}
@@ -73,7 +76,11 @@ const GamePage = ({
           playerNumber={2}
         />
       </div>
-      <div></div>
+      <div>
+      
+      <PlayerDeck deck={player2DeckState}/>
+      
+      </div>
     </div>
     <div>{winnerRender()}</div>
     </>

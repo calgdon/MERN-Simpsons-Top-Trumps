@@ -289,6 +289,8 @@ function App() {
                 setupGame={setupGame}
                 player1Score={player1Score}
                 player2Score={player2Score}
+                player1DeckState={player1DeckState}
+                player2DeckState={player2DeckState}
               />
             }/>
           <Route path ="/rules" element={<Rules/>}
