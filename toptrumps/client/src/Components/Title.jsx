@@ -5,11 +5,9 @@ import './title.css'
 
 const Title = () => {
   return (
-    <>
-    <div>Title</div>
-    // two buttons - play and view cards
+    <div>
     <Link to="/play">to the play page</Link>
-    </>
+    </div>
   )
 }
 
