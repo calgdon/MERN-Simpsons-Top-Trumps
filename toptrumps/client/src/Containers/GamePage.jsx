@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import CardDetail from '../components/CardDetail'
 import GameForm from '../components/GameForm'
 import TopTrumpsService from '../services/TopTrumpsService'
-import "./gamepage.css"
+import "../css/gamepage.css"
 
 const GamePage = ({
   cards,

@@ -1,6 +1,6 @@
 import React from "react";
 import CardDetail from "./CardDetail";
-import "./cardgrid.css"
+import "../css/cardgrid.css"
 
 const CardGrid = ({ cards }) => {
   // if (!cards) return <h2>Loading...</h2>;
