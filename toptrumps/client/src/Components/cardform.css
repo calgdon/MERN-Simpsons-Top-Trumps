@@ -1,0 +1,11 @@
+.card-whole{
+    background-color: yellow;
+    position: sticky;
+    top: 0;
+    background-color: #f4ca1e;
+    border: 5px solid #000000;
+    height: 264px;
+    border-radius: 16px;
+    margin-top: 80px;
+    width: 45px;
+}

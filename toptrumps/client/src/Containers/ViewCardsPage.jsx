@@ -1,15 +1,14 @@
 import React from 'react'
 import CardForm from '../components/CardForm'
 import CardGrid from '../components/CardGrid'
+import "./viewcardspage.css"
 
 const ViewCardsPage = ({cards, addNewCard}) => {
   return (
-    <>
-    <div>ViewCardsPage</div>
-    <CardForm addNewCard={addNewCard}/>
+    <div className='ViewCardsPage'>
     <CardGrid cards={cards}/>
-
-    </>
+    <CardForm addNewCard={addNewCard}/>
+    </div>
   )
 }
 

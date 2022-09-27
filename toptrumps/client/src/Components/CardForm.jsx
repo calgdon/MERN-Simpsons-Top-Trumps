@@ -1,5 +1,6 @@
 import { useState } from "react"
 import TopTrumpsService from "../services/TopTrumpsService"
+import "./cardform.css"
 
 
 const CardForm = ({addNewCard}) => {
@@ -41,7 +42,7 @@ const CardForm = ({addNewCard}) => {
   return (
     <div className="card-whole">
       <form onSubmit={onSubmit}>
-        <h2>Create Guest:</h2>
+        <h2>Add Card:</h2>
         <div className="formwrap">
             <label htmlFor="Individual">Individual:</label>
             <input
@@ -52,9 +53,19 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData.Individual}
             />
-
         </div>
-
+        <div className="formwrap">
+            <label htmlFor="img_url">ImageUrl:</label>
+            <input
+                  onChange={onChange}
+                  type="text"
+                  name="img_url"
+                  id="img_url"
+                  required
+                  value={formData["img_url"]}
+            />
+            
+        </div>
         <div className="formwrap">
             <label htmlFor="MostLovable">Most Lovable:</label>
             <input
@@ -124,18 +135,6 @@ const CardForm = ({addNewCard}) => {
                   id="Walk of Fame Rating"
                   required
                   value={formData["Walk of Fame Rating"]}
-            />
-            
-        </div>
-        <div className="formwrap">
-            <label htmlFor="img_url">ImageUrl:</label>
-            <input
-                  onChange={onChange}
-                  type="text"
-                  name="img_url"
-                  id="img_url"
-                  required
-                  value={formData["img_url"]}
             />
             
         </div>
