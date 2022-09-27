@@ -3,8 +3,8 @@
 }
 
 .card-detail {
-    width: 200px;
-    max-width: 80%;
+    width: 400px;
+    /* max-width: 80%; */
     border: 5px solid black;
     border-radius: 30px;
     padding: 16px;
@@ -14,20 +14,23 @@
     margin: 0px 10px;
 }
 
-p {
+#name {
     border: 5px solid black;
     border-radius: 32px;
     padding: 8px;
     background-color: #0b31db;
     color: aliceblue;
+    text-align: center;
 }
 
 .cardbutton {
+    display: block;
     border: 5px solid black;
     border-radius: 32px;
     padding: 8px;
     background-color: #0b31db;
     color: aliceblue;
+    margin-top: 2px;
 }
 
 
@@ -45,8 +48,8 @@ p {
 }
 
 .trumpCardBack {
-    width: 200px;
-    max-width: 80%;
+    width: 400px;
+    /* max-width: 80%; */
     border: 5px solid black;
     border-radius: 30px;
     padding: 16px;
