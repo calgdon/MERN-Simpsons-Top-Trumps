@@ -1,7 +1,12 @@
 import React from "react";
 import "../css/carddetail.css"
 
-const CardDetail = ({ card }) => {
+const CardDetail = ({ card, deleteCardFromCards}) => {
+
+  const handleDeleteClick = () => {
+    if (window.confirm("Are you Sure?")){
+    deleteCardFromCards(card._id)}
+  }
 
 
   return(
@@ -16,7 +21,7 @@ const CardDetail = ({ card }) => {
   <p className="biggest-nerd" id="paragraph">Biggest Nerd: {card["Biggest Nerd"]}</p>
   <p className="greatest-anarchist" id="paragraph">Greatest Anarchist: {card["Greatest Anarchist"]}</p>
   <p className="walk-of-fame-rating" id="paragraph">Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
-
+  <button className='delete' onClick={handleDeleteClick}> Delete?</button>
   </li>
   )
 };
