@@ -1,8 +1,3 @@
-body {
-    font-family: simpsonsfont;
-    src: url(http://fonts.cdnfonts.com/css/simpsonfont);
-}
-
 .card-detail{
     width: 200px;
     border: 5px solid black;
@@ -29,6 +24,6 @@ p{
 
 .character-name{
     font-size: 24px;
-    font-family: simpsonsfont;
+    font-family: Simpsonfont;
 }
 
