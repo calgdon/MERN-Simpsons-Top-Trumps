@@ -9,6 +9,23 @@ body {
 }
 
 
+h2 {
+    text-align: center;
+}
+
+div.container {
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+
+ul.myUL {
+    display: inline-block;
+    text-align: left;
+  }
+
+
+
 
 
 
