@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  createRoutesFromChildren,
 } from "react-router-dom";
 import "./css/App.css";
 import ViewCardsPage from "./containers/ViewCardsPage";
