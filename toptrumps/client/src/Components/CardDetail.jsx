@@ -8,7 +8,7 @@ const CardDetail = ({ card }) => {
 
   <li key = {card._id} className="card-detail">
   
-  <p className="character-name">Name: {card.Individual}</p>
+  <p className="character-name">{card.Individual}</p>
   <img className="character-image" src={card.img_url} alt="Photo of simpsons character" />
   <p className="most-loveable">Most Loveable: {card["Most Lovable"]}</p>
   <p className="smartest">Smartest: {card.Smartest}</p>
