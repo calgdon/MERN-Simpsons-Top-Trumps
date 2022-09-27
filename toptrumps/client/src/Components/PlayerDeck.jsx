@@ -1,5 +1,6 @@
 import React from "react";
 import toptrumpback from "../images/toptrumpback.jpeg";
+import '../css/playerdeck.css'
 
 {/* <li>
   <img className="trumpCardBack" src={toptrumpback} />
@@ -14,7 +15,12 @@ const PlayerDeck = ({ deck }) => {
   });
   console.log(deckRender)
 
-  return <ul className="playerDeckList">{deckRender}</ul>;
-};
+  return (
+    <>
+  <br />
+  <br/> 
+  <ul className="playerDeckList">{deckRender}</ul>;)
+  </>)
+}
 
 export default PlayerDeck;

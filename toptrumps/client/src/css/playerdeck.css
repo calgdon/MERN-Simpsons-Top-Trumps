@@ -1,0 +1,10 @@
+.playerDeckList{
+margin:0;
+height:600px
+}
+
+
+.playerDeckListItem{
+    margin-bottom:-380px;
+    list-style: none;
+}

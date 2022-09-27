@@ -76,7 +76,11 @@ const GamePage = ({
           playerNumber={2}
         />
       </div>
-      <div><PlayerDeck deck={player2DeckState}/></div>
+      <div>
+      
+      <PlayerDeck deck={player2DeckState}/>
+      
+      </div>
     </div>
     <div>{winnerRender()}</div>
     </>
