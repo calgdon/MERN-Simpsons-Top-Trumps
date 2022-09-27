@@ -1,11 +1,30 @@
 
-
-
-.button {
-    background-color: yellow ;
+h1 {
+    font-size: xx-large;
     text-align: center;
-    color: white;
-    position: relative;
+}
 
+
+button {
+    background-color: yellow ;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    width: 15%;
+    height: 30%;
+    font-size: x-large;
+    margin-right: 5%;
+    margin-left: 10%;
+ 
+    
+}
+
+a:link {
+    text-decoration-line: none;
+    text-decoration: none;
+   
+  }
+a:visited {
+    text-decoration-line: none;
 }
 
