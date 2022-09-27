@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import CardDetail from '../components/CardDetail'
 import GameForm from '../components/GameForm'
 import TopTrumpsService from '../services/TopTrumpsService'
+import toptrumpback from '../images/toptrumpback.jpeg'
 
-import "../css/gamepage.css"
+import '../css/gamepage.css'
 
 const GamePage = ({
   cards,
@@ -19,7 +20,12 @@ const GamePage = ({
   player1Score,
   player2Score,
 }) => {
-  const playerCard = controllingPlayer == 1 ? player1Card : player2Card
+  const controllingPlayerCard =
+    controllingPlayer == 1 ? player1Card : player2Card
+  const nonControllingPlayerCard =
+    controllingPlayer !== 1 ? player1Card : player2Card
+
+  const blankCard = {}
 
   const handleRerunSetup = () => {
     setupGame()
@@ -38,12 +44,12 @@ const GamePage = ({
             </h3>
             <div className='modalbuttons'>
               <Link to='/'>
-                <button className='button' onClick={handleRerunSetup}>
+                <button className='modalbutton' onClick={handleRerunSetup}>
                   Return Home
                 </button>
               </Link>
               <Link to='/play'>
-                <button className='button' onClick={handleRerunSetup}>
+                <button className='modalbutton' onClick={handleRerunSetup}>
                   Play Again
                 </button>
               </Link>
@@ -58,17 +64,26 @@ const GamePage = ({
     setWinner(1)
   }
 
+
+
+
   return (
-    <>
-      <div>GamePage</div>
+    <div id='gameplayWrapper'>
       <div>{winnerRender()}</div>
       <GameForm
-        card={playerCard}
+        card={player1Card}
         playGameRound={playGameRound}
         controllingPlayer={controllingPlayer}
+        playerNumber={1}
+      />
+      <GameForm
+        card={player2Card}
+        playGameRound={playGameRound}
+        controllingPlayer={controllingPlayer}
+        playerNumber={2}
       />
       <button onClick={handleWinnerClick}>Button</button>
-    </>
+    </div>
   )
 }
 
