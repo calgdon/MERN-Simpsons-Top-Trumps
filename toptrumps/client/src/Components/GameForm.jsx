@@ -15,7 +15,7 @@ const GameForm = ({ card, playGameRound, controllingPlayer, playerNumber }) => {
     controllingPlayer == playerNumber ? (
       <div className='card-detail'>
         <form action=''>
-          <p> {card.Individual} </p>
+        <h3 className='cardbutton'> {card.Individual} </h3>
           <br />
           <img
             className='character-image'
