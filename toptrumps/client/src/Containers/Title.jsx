@@ -5,18 +5,29 @@ import '../css/title.css'
 
 const Title = () => {
   return (
+
+    
+
     <>
     <h1>Top Trumps : The Simpsons</h1>
-   <div className='button'>
-    <button>
-    <Link to="/cards">Cards</Link></button>
-    <button>
-    <Link to="/rules">Rules</Link></button>
-    <button>
-    <Link to="/play">Play</Link>
+  
+  
+
+   <div className='button'/>
+   <button>
+   <Link to="/play">Play</Link>
+   </button>
+   <button>
+    <Link to="/cards">Cards</Link>
     </button>
-   </div>
+    <button>
+    <Link to="/rules">Rules</Link>
+    </button>
+
     </>
+
+    
+  
   
   )
 }

@@ -1,5 +1,9 @@
 
+
+
 h1 {
+    font-style: Simpsonfont;
+    src: url("../images/Simpsonfont.ttf");
     font-size: xx-large;
     text-align: center;
 }
@@ -7,15 +11,26 @@ h1 {
 
 button {
     font-family: Simpsonfont;
+    src: url("../images/Simpsonfont.ttf");
     background-color: yellow ;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     text-align: center;
     color: black;
-    width: 15%;
-    height: 30%;
+    width: 20%;
+    height: 100%;
     font-size: x-large;
-    margin-right: 5%;
+    margin-right: 10%;
+
+    /* margin-right: 5%;
     margin-left: 10%;
+    /* height: 80px;
+    line-height: 160px;  
+    width: 300px;   */
+    /* font-size: 2em; */
+    font-weight: bold;
+    border-radius: 60%;
+    /* -ms-flex-align: center; */
+    
  
     
 }
