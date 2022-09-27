@@ -9,23 +9,15 @@ import toptrumpback from '../images/toptrumpback.jpeg'
 import '../css/gamepage.css'
 
 const GamePage = ({
-  cards,
   playGameRound,
   player1Card,
   player2Card,
   winner,
   controllingPlayer,
-  setWinner,
   setupGame,
   player1Score,
   player2Score,
 }) => {
-  const controllingPlayerCard =
-    controllingPlayer == 1 ? player1Card : player2Card
-  const nonControllingPlayerCard =
-    controllingPlayer !== 1 ? player1Card : player2Card
-
-  const blankCard = {}
 
   const handleRerunSetup = () => {
     setupGame()
@@ -60,10 +52,6 @@ const GamePage = ({
     }
   }
 
-  const handleWinnerClick = () => {
-    setWinner(1)
-  }
-
 
 
 
@@ -82,7 +70,6 @@ const GamePage = ({
         controllingPlayer={controllingPlayer}
         playerNumber={2}
       />
-      <button onClick={handleWinnerClick}>Button</button>
     </div>
   )
 }
