@@ -13,15 +13,18 @@ h2 {
     text-align: center;
 }
 
-div.container {
+#rules-div {
     text-align: center;
     font-weight: bolder;
     font-size: x-large;
+    border: 3px black groove;
+    background-color: yellow;
   }
 
-ul.myUL {
+#myUL {
     display: inline-block;
     text-align: left;
+    
   }
 
 
