@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import CardDetail from '../components/CardDetail'
+import CardComparisonDetail from '../components/CardComparisonDetail'
 import GameForm from '../components/GameForm'
 import TopTrumpsService from '../services/TopTrumpsService'
 import toptrumpback from '../images/toptrumpback.jpeg'
@@ -20,16 +20,43 @@ const GamePage = ({
   player1Score,
   player2Score,
   player1DeckState,
-  player2DeckState
+  player2DeckState,
+  cardComparison,
+  setCardComparison
 }) => {
-
   const handleRerunSetup = () => {
     setupGame()
   }
 
-  const handleGameplayClick = (e)=>{
-    e.preventDefault();
+  const handleGameplayClick = (e) => {
+    e.preventDefault()
+    winningCardRender(e.target.value)
+    setCardComparison(true)
+  }
+
+  const handleWinningCardModalClick = (e) => {
+    e.preventDefault()
     playGameRound(e.target.value)
+    setCardComparison(null)
+  }
+
+  const winningCardRender = (attribute) => {
+    if (!cardComparison) {
+      return
+    } else {
+      return (
+        <div id='winningCardModal' class='modal'>
+          <div id='winningCardFlexContainer'>
+              <CardComparisonDetail card={player1Card} />
+              <CardComparisonDetail card={player2Card} />
+            </div>
+
+            <button value={attribute} onClick={handleWinningCardModalClick}>
+              Next Card
+            </button>
+          </div>
+      )
+    }
   }
 
   const winnerRender = () => {
@@ -61,9 +88,6 @@ const GamePage = ({
     }
   }
 
-
-
-
   return (
     <>
     <NavBar/>
@@ -81,7 +105,6 @@ const GamePage = ({
           controllingPlayer={controllingPlayer}
           playerNumber={2}
           handleClick={handleGameplayClick}
-
         />
       </div>
       <div>
@@ -89,8 +112,8 @@ const GamePage = ({
       <PlayerDeck deck={player2DeckState}/>
       
       </div>
-    </div>
-    <div>{winnerRender()}</div>
+      <div>{winnerRender()}</div>
+      <div>{winningCardRender()}</div>
     </>
   )
 }
