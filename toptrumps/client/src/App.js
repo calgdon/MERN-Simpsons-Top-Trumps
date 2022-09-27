@@ -11,6 +11,7 @@ import TopTrumpsService from "./services/TopTrumpsService";
 import Title from "./containers/Title";
 import GamePage from "./containers/GamePage";
 import Rules from "./containers/Rules";
+import NavBar from './components/Navbar';
 
 
 function App() {
@@ -269,6 +270,7 @@ function App() {
   return (
     <>
       <Router>
+      <NavBar/>
         <Routes>
           <Route exact path='/' element={<Title cards={cards} />} />
           <Route
