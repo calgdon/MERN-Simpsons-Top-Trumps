@@ -56,21 +56,27 @@ const GamePage = ({
 
 
   return (
+    <>
     <div id='gameplayWrapper'>
-      <div>{winnerRender()}</div>
-      <GameForm
-        card={player1Card}
-        playGameRound={playGameRound}
-        controllingPlayer={controllingPlayer}
-        playerNumber={1}
-      />
-      <GameForm
-        card={player2Card}
-        playGameRound={playGameRound}
-        controllingPlayer={controllingPlayer}
-        playerNumber={2}
-      />
+      <div></div>
+      <div className='gridComponent'>
+        <GameForm
+          card={player1Card}
+          playGameRound={playGameRound}
+          controllingPlayer={controllingPlayer}
+          playerNumber={1}
+        />
+        <GameForm
+          card={player2Card}
+          playGameRound={playGameRound}
+          controllingPlayer={controllingPlayer}
+          playerNumber={2}
+        />
+      </div>
+      <div></div>
     </div>
+    <div>{winnerRender()}</div>
+    </>
   )
 }
 

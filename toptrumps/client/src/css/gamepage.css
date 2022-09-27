@@ -1,7 +1,12 @@
 #gameplayWrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
+.gridComponent {
+    display: flex;
+    margin-left: 10px;
+}
 
 .modal {
     position: fixed;

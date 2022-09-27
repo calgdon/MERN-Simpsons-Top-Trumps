@@ -8,10 +8,7 @@ import blah from '../images/a1f115ae1d5262c8db205ffadd918ef8 (1).png'
 const Title = () => {
   return (
 
-    
-
     <>
-    
    <div className='button'>
    <button>
    <Link to="/play">Play</Link>

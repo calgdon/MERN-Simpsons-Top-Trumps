@@ -73,7 +73,7 @@ const GameForm = ({ card, playGameRound, controllingPlayer, playerNumber }) => {
         </form>
       </div>
     ) : (
-      <img src={toptrumpback} />
+      <img className="trumpCardBack" src={toptrumpback} />
     )
 
   return (

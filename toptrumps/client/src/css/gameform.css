@@ -11,7 +11,7 @@
     list-style: none;
     list-style-type: none;
     background-color: #f4ca1e;
-    margin: 0;
+    margin: 0px 10px;
 }
 
 p {
@@ -35,10 +35,23 @@ p {
     width: 150px;
     height: 180px;
     margin: 25px;
+    border-radius: 30px;
 }
 
 .character-name {
     font-size: 24px;
     text-align: center;
     font-family: Simpsonsfont;
+}
+
+.trumpCardBack {
+    width: 200px;
+    max-width: 80%;
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 16px;
+    list-style: none;
+    list-style-type: none;
+    background-color: #f4ca1e;
+    margin: 0px 10px;
 }
