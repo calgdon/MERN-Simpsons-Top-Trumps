@@ -261,6 +261,12 @@ function App() {
     )
   }
 
+  const deleteCardFromCards = idtoDelete => {
+    TopTrumpsService.deleteTopTrump(idtoDelete).then(() => {
+        setCards(cards.filter(card => card._id !== idtoDelete))
+    })
+  }
+
   return (
     <>
       <Router>
@@ -268,7 +274,7 @@ function App() {
           <Route exact path='/' element={<Title cards={cards} />} />
           <Route
             path='/cards'
-            element={<ViewCardsPage cards={cards} addNewCard={addNewCard} />}
+            element={<ViewCardsPage cards={cards} addNewCard={addNewCard} deleteCardFromCards={deleteCardFromCards} />}
           />
           <Route
             path='/play'

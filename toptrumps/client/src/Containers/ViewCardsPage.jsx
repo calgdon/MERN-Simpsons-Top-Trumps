@@ -3,11 +3,11 @@ import CardForm from '../components/CardForm'
 import CardGrid from '../components/CardGrid'
 import "../css/viewcardspage.css"
 
-const ViewCardsPage = ({cards, addNewCard}) => {
+const ViewCardsPage = ({cards, addNewCard, deleteCardFromCards}) => {
   return (
     <div className='ViewCardsPage'>
-    <CardGrid cards={cards}/>
-    <CardForm addNewCard={addNewCard}/>
+    <CardGrid cards={cards} deleteCardFromCards={deleteCardFromCards}/>
+    <CardForm addNewCard={addNewCard} />
     </div>
   )
 }
