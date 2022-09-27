@@ -5,12 +5,13 @@ import {
   Routes,
   Route,
   createRoutesFromChildren,
-} from 'react-router-dom'
-import './App.css'
-import ViewCardsPage from './containers/ViewCardsPage'
-import TopTrumpsService from './services/TopTrumpsService'
-import Title from './components/Title'
-import GamePage from './containers/GamePage'
+} from "react-router-dom";
+import "./css/App.css";
+import ViewCardsPage from "./containers/ViewCardsPage";
+import TopTrumpsService from "./services/TopTrumpsService";
+import Title from "./containers/Title";
+import GamePage from "./containers/GamePage";
+import Rules from "./containers/Rules";
 
 
 function App() {
