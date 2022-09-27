@@ -11,10 +11,7 @@ const Title = () => {
     
 
     <>
-    <h1>Top Trumps : The Simpsons</h1>
-  
-  
-
+    
    <div className='button'>
    <button>
    <Link to="/play">Play</Link>
