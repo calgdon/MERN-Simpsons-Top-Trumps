@@ -15,7 +15,7 @@ const Title = () => {
   
   
 
-   <div className='button'/>
+   <div className='button'>
    <button>
    <Link to="/play">Play</Link>
    </button>
