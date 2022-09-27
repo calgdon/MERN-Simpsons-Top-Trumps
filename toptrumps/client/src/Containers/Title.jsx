@@ -6,25 +6,32 @@ import blah from '../images/a1f115ae1d5262c8db205ffadd918ef8 (1).png'
 
 
 const Title = () => {
-  return (
-
-    
+  return (  
 
     <>
-    
-   <div className='button'>
-   <button>
-   <Link to="/play">Play</Link>
-   </button>
-   <button>
-    <Link to="/cards">Cards</Link>
-    </button>
-    <button>
-    <Link to="/rules">Rules</Link>
-    </button>
-   </div>
-   <img className="Main-logo" src={blah} alt="Simpsons Top Trumps Logo" />
 
+  <div className='logo'>
+  <img className="Main-logo" src={blah} alt="Simpsons Top Trumps Logo" />
+  </div>
+
+  
+  <div className ='flex-container'>
+   <div className='title-button'>
+   
+   <Link to="/play">Play</Link>
+  
+   </div>
+
+  <div className='title-button'>
+  <Link to="/cards">Cards</Link>
+  </div>
+
+  <div className='title-button'>
+  <Link to="/rules">Rules</Link>
+  </div>
+  </div>
+
+   
     </>
 
     
