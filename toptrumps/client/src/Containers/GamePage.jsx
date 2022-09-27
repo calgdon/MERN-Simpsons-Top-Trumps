@@ -26,6 +26,11 @@ const GamePage = ({
     setupGame()
   }
 
+  const handleGameplayClick = (e)=>{
+    e.preventDefault();
+    playGameRound(e.target.value)
+  }
+
   const winnerRender = () => {
     if (!winner) {
       return
@@ -65,15 +70,16 @@ const GamePage = ({
       <div className='gridComponent'>
         <GameForm
           card={player1Card}
-          playGameRound={playGameRound}
           controllingPlayer={controllingPlayer}
           playerNumber={1}
+          handleClick={handleGameplayClick}
         />
         <GameForm
           card={player2Card}
-          playGameRound={playGameRound}
           controllingPlayer={controllingPlayer}
           playerNumber={2}
+          handleClick={handleGameplayClick}
+
         />
       </div>
       <div>
