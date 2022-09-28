@@ -12,6 +12,7 @@ import Title from "./containers/Title";
 import GamePage from "./containers/GamePage";
 import Rules from "./containers/Rules";
 import NavBar from './components/Navbar';
+import ErrorPage from './containers/ErrorPage';
 
 
 function App() {
@@ -310,6 +311,7 @@ function App() {
             }
           />
           <Route path='/rules' element={<Rules />} />
+          <Route path="*" element={< ErrorPage />} /> 
         </Routes>
       </Router>
       {/* 
