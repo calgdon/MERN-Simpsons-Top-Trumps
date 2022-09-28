@@ -1,6 +1,6 @@
 import React from "react";
 import toptrumpback from "../images/toptrumpback.jpeg";
-import '../css/playerdeck.css'
+import '../css/Master.css'
 
 {/* <li>
   <img className="trumpCardBack" src={toptrumpback} />

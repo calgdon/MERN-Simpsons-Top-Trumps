@@ -1,6 +1,6 @@
 import { useState } from "react"
 import TopTrumpsService from "../services/TopTrumpsService"
-import "../css/cardform.css"
+import "../css/Master.css"
 
 
 const CardForm = ({addNewCard}) => {

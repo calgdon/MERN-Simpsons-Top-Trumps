@@ -7,7 +7,7 @@ import TopTrumpsService from '../services/TopTrumpsService'
 import toptrumpback from '../images/toptrumpback.jpeg'
 import NavBar from '../components/Navbar'
 
-import '../css/gamepage.css'
+import '../css/Master.css'
 import PlayerDeck from '../components/PlayerDeck'
 
 const GamePage = ({

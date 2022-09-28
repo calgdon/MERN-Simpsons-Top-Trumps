@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/gameform.css";
+import "../css/Master.css";
 import toptrumpback from "../images/toptrumpback.jpeg";
 
 const GameForm = ({ card, controllingPlayer, playerNumber, setSelectedCategory, setCardComparison}) => {

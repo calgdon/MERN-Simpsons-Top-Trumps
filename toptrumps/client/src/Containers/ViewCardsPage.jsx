@@ -2,7 +2,7 @@ import React from 'react'
 import CardForm from '../components/CardForm'
 import CardGrid from '../components/CardGrid'
 import NavBar from '../components/Navbar'
-import "../css/viewcardspage.css"
+import "../css/Master.css"
 
 const ViewCardsPage = ({cards, addNewCard, deleteCardFromCards}) => {
   return (

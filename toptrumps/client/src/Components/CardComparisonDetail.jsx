@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/carddetail.css'
+import '../css/Master.css'
 
 const cardComparisonDetail = ({ card }) => {
   

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './app.css'
+import './Master.css'
 
 const Rules = () => {
     return (

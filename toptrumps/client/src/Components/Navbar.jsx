@@ -1,22 +1,14 @@
 import { Link } from "react-router-dom";
-import "../css/Navbar.css"
+import "../css/Master.css"
 
 const NavBar = () => {
 
     return (
         <ul className="navbar">
-            <li className="nav-link">
-                <Link to="/">Home</Link>
-            </li>
-            <li className="nav-link">
-                <Link to="/play">Play</Link>
-            </li>
-            <li className="nav-link">
-                <Link to="/cards">Cards</Link>
-            </li>
-            <li className="nav-link">
-                <Link to="/rules">Rules</Link>
-            </li>
+                <Link className="general-button" to="/">Home</Link>
+                <Link className="general-button" to="/play">Play</Link>
+                <Link className="general-button" to="/cards">Cards</Link>
+                <Link className="general-button"  to="/rules">Rules</Link>
         </ul>
     )
 

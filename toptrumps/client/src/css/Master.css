@@ -1,0 +1,91 @@
+body{
+    height: 100vh;
+    background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/Familyguysimpsons0.jpg?q=50&fit=contain&w=1500&h=&dpr=1.5");
+    font-family: Simpsonfont;
+    src: url("../images/simpsonfont/Simpsonfont_DEMO.otf");
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: absolute;
+    background-attachment: fixed;
+}
+
+#main-logo{
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 9%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+
+}
+
+.title-flex-container{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    gap: 5%;
+}
+
+.general-button {
+    display: flex;
+    background-color: #f4ca1e ;
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    border: 5px solid black;
+    border-radius: 30px;
+    min-width: 200px;
+    width: 20%;
+    height: 15%;    
+    justify-content: center;
+    align-items: center;
+
+}
+
+a:link {
+    text-decoration-line: none;
+    text-decoration: none;
+    text-justify: center;
+    color: inherit;
+   
+  }
+a:visited {
+    text-decoration-line: none;
+}
+.general-button:hover {
+    background-color: blue;
+    color: #f4ca1e;
+    
+}
+
+#rules-flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+#rules-div {    
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+    border: 3px black groove;
+    background-color: #f4ca1e;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10%;
+    border-radius: 16px;
+    max-width: 747px;
+  }
+
+#rules-Ul {
+    display: inline-block;
+    text-align: left;
+    block-size: 80%; 
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: space-evenly;
+    height: 5%;
+}

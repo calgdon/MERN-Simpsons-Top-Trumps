@@ -5,7 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import "./css/App.css";
+import "./css/Master.css";
 import ViewCardsPage from "./containers/ViewCardsPage";
 import TopTrumpsService from "./services/TopTrumpsService";
 import Title from "./containers/Title";
