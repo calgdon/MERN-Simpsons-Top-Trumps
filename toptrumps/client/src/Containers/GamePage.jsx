@@ -38,17 +38,19 @@ const GamePage = ({
   }
 
   const winningCardRender = !cardComparison ? null : (
-        <div id='winningCardModal' className='modal'>
-          <div id='winningCardFlexContainer'>
-            <CardComparisonDetail card={player1Card} />
-            <CardComparisonDetail card={player2Card} />
-          </div>
+    <div id='winningCardModal' className='modal'>
+      <div id='winningCardFlexContainer'>
+          <CardComparisonDetail card={player1Card} />
+          <CardComparisonDetail card={player2Card} />
+      </div>
 
-          <button onClick={handleWinningCardModalClick}>
-            Next Card
-          </button>
-        </div>
-      )
+      <div className='next-button-container'>
+        <button className='next-button' onClick={handleWinningCardModalClick}>
+          Next Card
+        </button>
+      </div>
+    </div>
+  )
 
   const winnerRender = !winner ? null : (
         <div className='modal'>
@@ -59,12 +61,12 @@ const GamePage = ({
             </h3>
             <div className='modalbuttons'>
               <Link to='/'>
-                <button className='modalbutton' onClick={handleRerunSetup}>
+                <button className='next-button' onClick={handleRerunSetup}>
                   Return Home
                 </button>
               </Link>
               <Link to='/play'>
-                <button className='modalbutton' onClick={handleRerunSetup}>
+                <button className='next-button' onClick={handleRerunSetup}>
                   Play Again
                 </button>
               </Link>
