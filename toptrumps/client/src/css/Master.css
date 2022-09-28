@@ -289,7 +289,8 @@ margin: 2%;
 
 .gridComponent {
     display: flex;
-    padding: 10px
+    padding: 10px;
+    justify-content: center;
 }
 
 .modal {
@@ -355,7 +356,7 @@ margin: 2%;
     margin: 2%;
 }
 .player-deck{
-    width:100%
+    width:75%
 }
 .playerDeckList{
     margin:0;
@@ -364,19 +365,21 @@ margin: 2%;
     
     
 .playerDeckListItem{
-        /* margin-bottom:-380px; */
         list-style: none;
         /* height: 50px; */
-        width: 100%
+        width: 100%;
+        margin-bottom: -50%;
     }
     .toptrumpbackdeck {
         border: 5px solid black;
         border-radius: 30px;
-        padding: 16px;
+        padding: 5%;
         list-style: none;
         list-style-type: none;
         background-color: #f4ca1e;
-        margin: 0px 10px;
+        /* margin: 0px 10px; */
         /* width: 30px; */
-        width:50%
+        width: 25%;
+        /* margin-bottom:-99%; */
+
     }
