@@ -15,7 +15,7 @@ const GameForm = ({
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-expressions
-    gameVsComputer == true && controllingPlayer === 2
+    gameVsComputer === true && controllingPlayer === 2
       ? computerTurnTrigger()
       : null;
   }, [card]);
@@ -70,7 +70,7 @@ const GameForm = ({
   };
 
   const playerCardRender =
-    controllingPlayer == playerNumber ? (
+    controllingPlayer === playerNumber ? (
       <div className="game-card-detail">
         <form action="">
           <h3 id="card-name"> {card.Individual} </h3>
@@ -78,7 +78,7 @@ const GameForm = ({
           <img
             className="character-image"
             src={card.img_url}
-            alt="Photo of simpsons character"
+            alt="Simpsons character"
           />
           <br />
           <button
@@ -131,7 +131,7 @@ const GameForm = ({
         </form>
       </div>
     ) : (
-      <img className="trumpCardBack" src={toptrumpback} />
+      <img className="trumpCardBack" alt ="reverse of Top Trump Card" src={toptrumpback} />
     );
 
   return <>{playerCardRender}</>;

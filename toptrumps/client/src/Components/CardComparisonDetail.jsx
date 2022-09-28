@@ -14,7 +14,7 @@ const cardComparisonDetail = ({ card }) => {
       <img
         className='character-image'
         src={card.img_url}
-        alt='Photo of simpsons character'
+        alt='Simpsons character'
       />
       <p className='card-category'>Most Loveable: {card['Most Lovable']}</p>
       <p className='card-category'>Smartest: {card.Smartest}</p>

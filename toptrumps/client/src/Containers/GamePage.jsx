@@ -54,7 +54,7 @@ const GamePage = ({
           <div className='modalText' id='myModal'>
             <h2>WE HAVE A WINNER AND IT IS PLAYER {winner}</h2>
             <h3>
-              Player 1 Score: {player1Score} - Player 2 Score: {player2Score}{' '}
+              {player1Score} - {player2Score}{' '}
             </h3>
             <div className='modalbuttons'>
               <Link to='/'>
