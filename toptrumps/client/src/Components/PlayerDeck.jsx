@@ -9,7 +9,7 @@ const PlayerDeck = ({ deck }) => {
   const deckRender = deck.map(() => {
     return (
       <li className="playerDeckListItem">
-        <img className="trumpCardBack" src={toptrumpback} />
+        <img className="toptrumpbackdeck" src={toptrumpback} />
       </li>
     );
   });

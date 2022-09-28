@@ -78,7 +78,7 @@ const GamePage = ({
       <NavBar />
       <div id='gameplayWrapper'>
         <div>
-          <PlayerDeck deck={player1DeckState} />
+          <PlayerDeck  className='player-deck' deck={player1DeckState} />
         </div>
 
         <div className='gridComponent'>
@@ -99,7 +99,7 @@ const GamePage = ({
         </div>
 
         <div>
-          <PlayerDeck deck={player2DeckState} />
+          <PlayerDeck  className='player-deck' deck={player2DeckState} />
         </div>
       </div>
       <div>{winnerRender}</div>
