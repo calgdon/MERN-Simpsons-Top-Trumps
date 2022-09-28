@@ -23,48 +23,35 @@ const GamePage = ({
   player2DeckState,
   cardComparison,
   setCardComparison,
+  selectedCategory,
+  setSelectedCategory
 }) => {
+
   const handleRerunSetup = () => {
     setupGame()
   }
 
-  const handleGameplayClick = (e) => {
-    e.preventDefault()
-    winningCardRender(e.target.value)
-    setCardComparison(true)
-  }
-
   const handleWinningCardModalClick = (e) => {
     e.preventDefault()
-    playGameRound(e.target.value)
+    playGameRound(selectedCategory)
     setCardComparison(null)
   }
 
-  const winningCardRender = (attribute) => {
-    if (!cardComparison) {
-      return
-    } else {
-      return (
-        <div id='winningCardModal' class='modal'>
+  const winningCardRender = !cardComparison ? null : (
+        <div id='winningCardModal' className='modal'>
           <div id='winningCardFlexContainer'>
             <CardComparisonDetail card={player1Card} />
             <CardComparisonDetail card={player2Card} />
           </div>
 
-          <button value={attribute} onClick={handleWinningCardModalClick}>
+          <button onClick={handleWinningCardModalClick}>
             Next Card
           </button>
         </div>
       )
-    }
-  }
 
-  const winnerRender = () => {
-    if (!winner) {
-      return
-    } else {
-      return (
-        <div class='modal' data-keyboard='false' data-backdrop='static'>
+  const winnerRender = !winner ? null : (
+        <div className='modal'>
           <div className='modalText' id='myModal'>
             <h2>WE HAVE A WINNER AND IT IS PLAYER {winner}</h2>
             <h3>
@@ -85,9 +72,7 @@ const GamePage = ({
           </div>
         </div>
       )
-    }
-  }
-
+    
   return (
     <>
       <NavBar />
@@ -101,13 +86,15 @@ const GamePage = ({
             card={player1Card}
             controllingPlayer={controllingPlayer}
             playerNumber={1}
-            handleClick={handleGameplayClick}
+            setSelectedCategory={setSelectedCategory}
+            setCardComparison={setCardComparison}
           />
           <GameForm
             card={player2Card}
             controllingPlayer={controllingPlayer}
             playerNumber={2}
-            handleClick={handleGameplayClick}
+            setSelectedCategory={setSelectedCategory}
+            setCardComparison={setCardComparison}
           />
         </div>
 
@@ -115,8 +102,8 @@ const GamePage = ({
           <PlayerDeck deck={player2DeckState} />
         </div>
       </div>
-      <div>{winnerRender()}</div>
-      <div>{winningCardRender()}</div>
+      <div>{winnerRender}</div>
+      <div>{winningCardRender}</div>
     </>
   )
 }
