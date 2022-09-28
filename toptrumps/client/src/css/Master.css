@@ -291,6 +291,7 @@ margin: 2%;
     display: flex;
     padding: 10px;
     justify-content: center;
+    height:85%
 }
 
 .modal {
@@ -368,12 +369,12 @@ margin: 2%;
         list-style: none;
         /* height: 50px; */
         width: 100%;
-        margin-bottom: -50%;
+        margin-bottom: -47%;
     }
     .toptrumpbackdeck {
         border: 5px solid black;
         border-radius: 30px;
-        padding: 5%;
+        padding: 2%;
         list-style: none;
         list-style-type: none;
         background-color: #f4ca1e;
