@@ -38,17 +38,19 @@ const GamePage = ({
   }
 
   const winningCardRender = !cardComparison ? null : (
-        <div id='winningCardModal' className='modal'>
-          <div id='winningCardFlexContainer'>
-            <CardComparisonDetail card={player1Card} />
-            <CardComparisonDetail card={player2Card} />
-          </div>
+    <div id='winningCardModal' className='modal'>
+      <div id='winningCardFlexContainer'>
+          <CardComparisonDetail card={player1Card} />
+          <CardComparisonDetail card={player2Card} />
+      </div>
 
-          <button onClick={handleWinningCardModalClick}>
-            Next Card
-          </button>
-        </div>
-      )
+      <div className='next-button-container'>
+        <button className='next-button' onClick={handleWinningCardModalClick}>
+          Next Card
+        </button>
+      </div>
+    </div>
+  )
 
   const winnerRender = !winner ? null : (
         <div className='modal'>
