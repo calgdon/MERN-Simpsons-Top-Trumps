@@ -29,20 +29,20 @@ const GameForm = ({
       "Walk of Fame Rating",
     ];
     const maximums = {
-      "Most Lovable": 1,
-      Smartest: 1,
-      Fattest: 1,
-      "Biggest Nerd": 1,
-      "Greatest Anarchist": 1,
-      "Walk of Fame Rating": 1,
+      "Most Lovable": 10,
+      Smartest: 29.5,
+      Fattest: 49,
+      "Biggest Nerd": 198,
+      "Greatest Anarchist": 5,
+      "Walk of Fame Rating": 20,
     };
     const minimums = {
-      "Most Lovable": 1,
-      Smartest: 1,
-      Fattest: 1,
-      "Biggest Nerd": 1,
+      "Most Lovable": 3,
+      Smartest: 22,
+      Fattest: 20,
+      "Biggest Nerd": 140,
       "Greatest Anarchist": 1,
-      "Walk of Fame Rating": 1,
+      "Walk of Fame Rating": 7,
     };
     let computerDecision = "";
     let highestValue = 0;
@@ -56,8 +56,8 @@ const GameForm = ({
         computerDecision = category;
       }
     });
-    console.log("computerDecision", computerDecision);
-    console.log("highestValue", highestValue);
+    console.log("computerDecision",playerNumber, computerDecision);
+    console.log("highestValue", playerNumber, highestValue);
     setSelectedCategory(computerDecision);
     setCardComparison(true);
   };

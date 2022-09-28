@@ -29,7 +29,7 @@ function App() {
   const [player2Score, setPlayer2Score] = useState(0)
   const [cardComparison, setCardComparison] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState()
-  const [gameVsComputer, setGameVsComputer] = useState(true)
+  const [gameVsComputer, setGameVsComputer] = useState(false)
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))

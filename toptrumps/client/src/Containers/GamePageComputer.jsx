@@ -24,8 +24,6 @@ const GamePageComputer = ({
   setSelectedCategory,
   gameVsComputer,
 }) => {
-
-
   const handleRerunSetup = () => {
     setupGame();
   };
