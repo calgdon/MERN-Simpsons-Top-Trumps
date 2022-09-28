@@ -2,14 +2,15 @@ import React from "react";
 import "../css/gameform.css";
 import toptrumpback from "../images/toptrumpback.jpeg";
 
-const GameForm = ({ card, controllingPlayer, playerNumber, handleClick}) => {
+const GameForm = ({ card, controllingPlayer, playerNumber, setSelectedCategory, setCardComparison}) => {
   console.log("gameformcard", card);
 
-  // const handleClick = (e) => {
+  const handleClick = (e) => {
     
-  //   e.preventDefault();
-  //   playGameRound(e.target.value);
-  // };
+    e.preventDefault();
+    setSelectedCategory(e.target.value);
+    setCardComparison(true)
+  };
 
   const playerCardRender =
       controllingPlayer == playerNumber ? (

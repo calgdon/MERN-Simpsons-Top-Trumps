@@ -11,7 +11,7 @@ import TopTrumpsService from "./services/TopTrumpsService";
 import Title from "./containers/Title";
 import GamePage from "./containers/GamePage";
 import Rules from "./containers/Rules";
-import NavBar from './components/Navbar';
+import ErrorPage from "./components/ErrorPage";
 
 
 function App() {
@@ -19,14 +19,12 @@ function App() {
   const [cards, setCards] = useState([])
   const [player1DeckState, setPlayer1DeckState] = useState()
   const [player2DeckState, setPlayer2DeckState] = useState()
-  const [controllingPlayer, setControllingPlayer] = useState(1)
-  const [player1Card, setPlayer1Card] = useState()
-  const [player2Card, setPlayer2Card] = useState()
-  const [winner, setWinner] = useState(null)
+  let [controllingPlayer, setControllingPlayer] = useState(1)
+  let [player1Card, setPlayer1Card] = useState()
+  let [player2Card, setPlayer2Card] = useState()
+  let [winner, setWinner] = useState(null)
   const [player1Score, setPlayer1Score] = useState(0)
   const [player2Score, setPlayer2Score] = useState(0)
-  const [cardComparison, setCardComparison] = useState(null)
-  const [selectedCategory, setSelectedCategory] = useState()
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))
@@ -200,7 +198,6 @@ function App() {
       if (player1Card[attribute] > player2Card[attribute]) {
         player1Deck.push(...[player1Card, player2Card])
       } else {
-        // eslint-disable-next-line no-unused-expressions
         player2Deck.push(...[player1Card, player2Card]), setControllingPlayer(2)
       }
     }
@@ -208,7 +205,6 @@ function App() {
       if (player2Card[attribute] > player1Card[attribute]) {
         player2Deck.push(...[player2Card, player1Card])
       } else {
-        // eslint-disable-next-line no-unused-expressions
         player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1)
       }
     }
@@ -278,13 +274,7 @@ function App() {
           <Route exact path='/' element={<Title cards={cards} />} />
           <Route
             path='/cards'
-            element={
-              <ViewCardsPage
-                cards={cards}
-                addNewCard={addNewCard}
-                deleteCardFromCards={deleteCardFromCards}
-              />
-            }
+            element={<ViewCardsPage cards={cards} addNewCard={addNewCard} deleteCardFromCards={deleteCardFromCards} />}
           />
           <Route
             path='/play'
@@ -300,16 +290,11 @@ function App() {
                 setupGame={setupGame}
                 player1Score={player1Score}
                 player2Score={player2Score}
-                player1DeckState={player1DeckState}
-                player2DeckState={player2DeckState}
-                cardComparison={cardComparison}
-                setCardComparison={setCardComparison}
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
               />
-            }
+            }/>
+          <Route path ="/rules" element={<Rules/>}
           />
-          <Route path='/rules' element={<Rules />} />
+          <Route path="*" element={< ErrorPage />} /> 
         </Routes>
       </Router>
       {/* 
