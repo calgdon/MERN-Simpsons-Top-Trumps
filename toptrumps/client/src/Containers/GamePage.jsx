@@ -61,12 +61,12 @@ const GamePage = ({
             </h3>
             <div className='modalbuttons'>
               <Link to='/'>
-                <button className='modalbutton' onClick={handleRerunSetup}>
+                <button className='next-button' onClick={handleRerunSetup}>
                   Return Home
                 </button>
               </Link>
               <Link to='/play'>
-                <button className='modalbutton' onClick={handleRerunSetup}>
+                <button className='next-button' onClick={handleRerunSetup}>
                   Play Again
                 </button>
               </Link>
