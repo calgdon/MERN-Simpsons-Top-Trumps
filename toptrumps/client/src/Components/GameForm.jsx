@@ -29,20 +29,20 @@ const GameForm = ({
       "Walk of Fame Rating",
     ];
     const maximums = {
-      "Most Lovable": 10,
-      Smartest: 29.5,
-      Fattest: 49,
-      "Biggest Nerd": 198,
-      "Greatest Anarchist": 5,
-      "Walk of Fame Rating": 20,
+      "Most Lovable": 99,
+      Smartest: 95,
+      Fattest: 91,
+      "Biggest Nerd": 96,
+      "Greatest Anarchist": 99,
+      "Walk of Fame Rating": 97,
     };
     const minimums = {
-      "Most Lovable": 3,
-      Smartest: 22,
-      Fattest: 20,
-      "Biggest Nerd": 140,
+      "Most Lovable": 1,
+      Smartest: 24,
+      Fattest: 10,
+      "Biggest Nerd": 25,
       "Greatest Anarchist": 1,
-      "Walk of Fame Rating": 7,
+      "Walk of Fame Rating": 59,
     };
     let computerDecision = "";
     let highestValue = 0;

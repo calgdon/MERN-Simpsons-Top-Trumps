@@ -278,7 +278,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path='/' element={<Title cards={cards} />} />
+          <Route exact path='/' element={<Title cards={cards} gameVsComputer={gameVsComputer} setGameVsComputer={setGameVsComputer} />} />
           <Route
             path='/cards'
             element={

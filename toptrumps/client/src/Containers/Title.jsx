@@ -5,7 +5,17 @@ import blah from '../images/a1f115ae1d5262c8db205ffadd918ef8 (1).png'
 
 
 
-const Title = () => {
+const Title = ({gameVsComputer, setGameVsComputer}) => {
+
+  const handleClick=(e)=>{
+    e.preventDefault()
+    console.log("helloMillie")
+    let gameModeChange = gameVsComputer? false:true
+    setGameVsComputer(gameModeChange)
+  }
+
+  const gameModeText = gameVsComputer? "vs Computer" : "vs Player"
+
   return (  
 
     <>
@@ -24,6 +34,8 @@ const Title = () => {
   <Link className='general-button' to="/cards">Cards</Link>
 
   <Link className='general-button' to="/rules">Rules</Link>
+
+  <button className='general-button' onClick={handleClick}>Select Game Mode <br/> {gameModeText}</button>
   </div>
 
    
