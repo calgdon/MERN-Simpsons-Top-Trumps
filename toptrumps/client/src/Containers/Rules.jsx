@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/App.css'
-import NavBar from '../components/Navbar'
 
 const Rules = () => {
     return (
       <>
-      <NavBar/>
+    <div id="rules-header">
     <h2>Rules</h2>
+    </div>
+    
     <div id="rules-div">
     <ul id='myUL'>
     <li>Win game by being the first player to win all the cards.</li>
