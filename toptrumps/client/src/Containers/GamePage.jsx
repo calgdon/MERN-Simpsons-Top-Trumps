@@ -1,14 +1,11 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import CardComparisonDetail from '../components/CardComparisonDetail'
 import GameForm from '../components/GameForm'
-import TopTrumpsService from '../services/TopTrumpsService'
-import toptrumpback from '../images/toptrumpback.jpeg'
 import NavBar from '../components/Navbar'
 
-import '../css/Master.css'
 import PlayerDeck from '../components/PlayerDeck'
+import '../css/Master.css'
 
 const GamePage = ({
   playGameRound,

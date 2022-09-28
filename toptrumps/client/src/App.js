@@ -13,6 +13,7 @@ import GamePage from "./containers/GamePage";
 import Rules from "./containers/Rules";
 import NavBar from './components/Navbar';
 import ErrorPage from './containers/ErrorPage';
+import GamePageComputer from './containers/GamePageComputer';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   const [player2Score, setPlayer2Score] = useState(0)
   const [cardComparison, setCardComparison] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState()
+  const [gameVsComputer, setGameVsComputer] = useState(false)
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))
@@ -276,7 +278,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path='/' element={<Title cards={cards} />} />
+          <Route exact path='/' element={<Title cards={cards} gameVsComputer={gameVsComputer} setGameVsComputer={setGameVsComputer} />} />
           <Route
             path='/cards'
             element={
@@ -290,7 +292,7 @@ function App() {
           <Route
             path='/play'
             element={
-              <GamePage
+              <GamePageComputer
                 cards={cards}
                 playGameRound={playGameRound}
                 player1Card={player1Card}
@@ -307,6 +309,7 @@ function App() {
                 setCardComparison={setCardComparison}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
+                gameVsComputer={gameVsComputer}
               />
             }
           />
