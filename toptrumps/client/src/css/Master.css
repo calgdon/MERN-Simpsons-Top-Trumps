@@ -1,247 +1,254 @@
 body {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/Familyguysimpsons0.jpg?q=50&fit=contain&w=1500&h=&dpr=1.5");
-    font-family: Simpsonfont;
-    src: url("../images/simpsonfont/Simpsonfont_DEMO.otf");
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: absolute;
-    background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/Familyguysimpsons0.jpg?q=50&fit=contain&w=1500&h=&dpr=1.5");
+  font-family: Simpsonfont;
+  src: url("../images/simpsonfont/Simpsonfont_DEMO.otf");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: absolute;
+  background-attachment: fixed;
 }
 
 #main-logo {
-    width: 80%;
-    margin-top: 2%;
-    margin-bottom: 9%;
-    margin-left: 10%;
-    margin-bottom: 10%;
-
+  width: 80%;
+  margin-top: 2%;
+  margin-bottom: 9%;
+  margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 .title-flex-container {
-    display: flex;
-    justify-content: center;
-    height: 80vh;
-    gap: 5%;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  gap: 5%;
 }
 
 .general-button {
-    display: flex;
-    background-color: #f4ca1e;
-    text-align: center;
-    color: black;
-    font-size: xx-large;
-    border: 5px solid black;
-    border-radius: 30px;
-    min-width: 200px;
-    width: 20%;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  background-color: #f4ca1e;
+  text-align: center;
+  color: black;
+  font-size: xx-large;
+  border: 5px solid black;
+  border-radius: 30px;
+  min-width: 200px;
+  width: 20%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+}
 
+.gamemode-button{
+  font-family: Simpsonfont;
+  display: flex;
+  background-color: #f4ca1e;
+  text-align: center;
+  color: black;
+  font-size: x-large;
+  border: 5px solid black;
+  border-radius: 30px;
+  min-width: 200px;
+  width: 20%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
 }
 
 a:link {
-    text-decoration-line: none;
-    text-decoration: none;
-    text-justify: center;
-    color: inherit;
-
+  text-decoration-line: none;
+  text-decoration: none;
+  text-justify: center;
+  color: inherit;
 }
 
 a:visited {
-    text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .general-button:hover {
-    background-color: blue;
-    color: #f4ca1e;
-
+  background-color: blue;
+  color: #f4ca1e;
 }
 
 #rules-flex-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #rules-div {
-    text-align: center;
-    font-weight: bolder;
-    font-size: x-large;
-    border: 3px black groove;
-    background-color: #f4ca1e;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 10%;
-    border-radius: 16px;
-    max-width: 747px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: x-large;
+  border: 3px black groove;
+  background-color: #f4ca1e;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 10%;
+  border-radius: 16px;
+  max-width: 747px;
 }
 
 #rules-Ul {
-    display: inline-block;
-    text-align: left;
-    block-size: 80%;
+  display: inline-block;
+  text-align: left;
+  block-size: 80%;
 }
 
 .navbar {
-    display: flex;
-    height: 5%;
-    padding-inline-start: 0;
-    padding: 0% 5%;
-    justify-content: space-evenly;
+  display: flex;
+  height: 5%;
+  padding-inline-start: 0;
+  padding: 0% 5%;
+  justify-content: space-evenly;
 }
 
-.navbar>ul>li {
-    margin: 2%;
+.navbar > ul > li {
+  margin: 2%;
 }
 
 #ViewCardsPage {
-    height: 95%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+  height: 95%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 .character-image {
-    height: 300px;
-    width: 100%;
-    background-color: white;
-    border-radius: 15px;
-    object-fit: contain;
+  height: 300px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  object-fit: contain;
 }
 
 #CardList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 10px;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
 }
 
 .card-detail {
-    min-width: 200px;
-    width: 30%;
-    max-width: 300px;
-    border: 5px solid black;
-    border-radius: 30px;
-    padding: 1%;
-    list-style: none;
-    list-style-type: none;
-    background-color: #f4ca1e;
-    text-align: -webkit-center;
-    height: 5%;
+  min-width: 200px;
+  width: 30%;
+  max-width: 300px;
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 1%;
+  list-style: none;
+  list-style-type: none;
+  background-color: #f4ca1e;
+  text-align: -webkit-center;
+  height: 5%;
 }
 
 .card-category {
-    border: 5px solid black;
-    border-radius: 32px;
-    padding: 8px;
-    background-color: #0b31db;
-    color: aliceblue;
-    text-align: center;
-    width: 90%;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin: 2%;
+  border: 5px solid black;
+  border-radius: 32px;
+  padding: 8px;
+  background-color: #0b31db;
+  color: aliceblue;
+  text-align: center;
+  width: 90%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 2%;
 }
 
 .delete-button {
-    display: flex;
-    background-color: #ee3737;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    border: 5px solid black;
-    border-radius: 30px;
-    min-width: 38px;
-    width: 30%;
-    height: 5%;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
+  display: flex;
+  background-color: #ee3737;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border: 5px solid black;
+  border-radius: 30px;
+  min-width: 38px;
+  width: 30%;
+  height: 5%;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
 }
 
 #card-name {
-    height: 5%;
-    font-size: 1.2em;
+  height: 5%;
+  font-size: 1.2em;
 }
 
 .card-whole {
-    position: sticky;
-    top: 80px;
-    background-color: #f4ca1e;
-    border: 5px solid #000000;
-    border-radius: 16px;
-    margin-top: 80px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+  position: sticky;
+  top: 80px;
+  background-color: #f4ca1e;
+  border: 5px solid #000000;
+  border-radius: 16px;
+  margin-top: 80px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .formwrap {
-    color: #ffffff;
-    background-color: #0b31db;
-    border: 5px solid #000000;
-    margin: 5px;
-    font-size: 20px;
-    padding: 5px;
+  color: #ffffff;
+  background-color: #0b31db;
+  border: 5px solid #000000;
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px;
 }
 
 .saveformbutton {
-    display: flex;
-    background-color: #3dee37;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    border: 5px solid black;
-    border-radius: 30px;
-    min-width: 38px;
-    width: 30%;
-    height: 5%;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
+  display: flex;
+  background-color: #3dee37;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 5px solid black;
+  border-radius: 30px;
+  min-width: 38px;
+  width: 30%;
+  height: 5%;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
 }
 
-
-
-
-
 .gameformWrapper {
-    display: flex;
+  display: flex;
 }
 
 .game-card-detail {
-    /* border: 5px solid black;
+  /* border: 5px solid black;
     border-radius: 30px;
     padding: 16px;
     list-style: none;
     list-style-type: none;
     background-color: #f4ca1e;
     margin: 0px 10px; */
-    width: 40%;
+  width: 40%;
 
-    border: 5px solid black;
-    border-radius: 30px;
-    padding: 1%;
-    /* list-style: none; */
-    /* list-style-type: none; */
-    background-color: #f4ca1e;
-    text-align: -webkit-center;
-    /* height: 5%; */
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 1%;
+  /* list-style: none; */
+  /* list-style-type: none; */
+  background-color: #f4ca1e;
+  text-align: -webkit-center;
+  /* height: 5%; */
 }
 
 #name {
-    border: 5px solid black;
-    border-radius: 32px;
-    padding: 8px;
-    background-color: #0b31db;
-    color: aliceblue;
-    text-align: center;
+  border: 5px solid black;
+  border-radius: 32px;
+  padding: 8px;
+  background-color: #0b31db;
+  color: aliceblue;
+  text-align: center;
 }
 
 .cardbutton {
-    /* display: block;
+  /* display: block;
     border: 5px solid black;
     border-radius: 32px;
     padding: 8px;
@@ -249,160 +256,155 @@ a:visited {
     color: aliceblue;
     margin-top: 2px; */
 
-    border: 5px solid black;
-    border-radius: 32px;
-    padding: 8px;
-    background-color: #0b31db;
-    color: aliceblue;
-    text-align: center;
-    width: 90%;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin: 2%;
-    font-family: Simpsonfont;
+  border: 5px solid black;
+  border-radius: 32px;
+  padding: 8px;
+  background-color: #0b31db;
+  color: aliceblue;
+  text-align: center;
+  width: 90%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 2%;
+  font-family: Simpsonfont;
 }
 
 .character-name {
-    font-size: 24px;
-    text-align: center;
-    font-family: Simpsonsfont;
-
+  font-size: 24px;
+  text-align: center;
+  font-family: Simpsonsfont;
 }
 
 .trumpCardBack {
-    border: 5px solid black;
-    border-radius: 30px;
-    padding: 16px;
-    list-style: none;
-    list-style-type: none;
-    background-color: #f4ca1e;
-    margin: 0px 10px;
-    width: 40%;
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 16px;
+  list-style: none;
+  list-style-type: none;
+  background-color: #f4ca1e;
+  margin: 0px 10px;
+  width: 40%;
 }
 
 #gameplayWrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .gridComponent {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    height: 85%
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  height: 85%;
 }
 
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #0b31db;
-    min-width: 30%;
-    border-radius: 25px;
-    border: 8px solid #FFD90F;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0b31db;
+  min-width: 30%;
+  border-radius: 25px;
+  border: 8px solid #ffd90f;
 }
 
 .modal .modalText {
-    color: #FFD90F;
-    text-decoration: solid;
-    text-align: center;
-    justify-content: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    line-height: 3;
-
+  color: #ffd90f;
+  text-decoration: solid;
+  text-align: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  line-height: 3;
 }
 
 .modalbuttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .modalbutton {
-    background-color: #FFD90F;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    display: flex;
-    margin-left: 20px;
+  background-color: #ffd90f;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  display: flex;
+  margin-left: 20px;
 }
 
 .modal-dialog {
-    pointer-events: all;
+  pointer-events: all;
 }
 
 #winningCardFlexContainer {
-    display: flex;
-    min-width: 1000px;
-    width: 100%;
-    justify-content: space-evenly;
-    padding: 1%
+  display: flex;
+  min-width: 1000px;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1%;
 }
 
 #card-name {
-    border: 5px solid black;
-    border-radius: 32px;
-    padding: 8px;
-    background-color: #0b31db;
-    color: aliceblue;
-    text-align: center;
-    width: 90%;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin: 2%;
+  border: 5px solid black;
+  border-radius: 32px;
+  padding: 8px;
+  background-color: #0b31db;
+  color: aliceblue;
+  text-align: center;
+  width: 90%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 2%;
 }
 
 .player-deck {
-    width: 75%
+  width: 75%;
 }
 
 .playerDeckList {
-    margin: 0;
-    height: 90vh;
+  margin: 0;
+  height: 90vh;
 }
 
-
 .playerDeckListItem {
-    list-style: none;
-    /* height: 50px; */
-    width: 100%;
-    margin-bottom: -47%;
-    text-align: center;
-
+  list-style: none;
+  /* height: 50px; */
+  width: 100%;
+  margin-bottom: -47%;
+  text-align: center;
 }
 
 .toptrumpbackdeck {
-    border: 5px solid black;
-    border-radius: 30px;
-    padding: 2%;
-    list-style: none;
-    list-style-type: none;
-    background-color: #f4ca1e;
-    /* margin: 0px 10px; */
-    /* width: 30px; */
-    width: 25%;
-    /* margin-bottom:-99%; */
-
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 2%;
+  list-style: none;
+  list-style-type: none;
+  background-color: #f4ca1e;
+  /* margin: 0px 10px; */
+  /* width: 30px; */
+  width: 25%;
+  /* margin-bottom:-99%; */
 }
 
 .next-button-container {
-    text-align: center;
+  text-align: center;
 }
 
 .next-button {
-    background-color: #FFD90F;
-    color: black;
-    padding: 10px;
-    border: 5px solid black;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    margin-left: 20px;
-    font-size: 24px;
-    text-align: center;
-    font-family: inherit;
-    margin: 1%;
+  background-color: #ffd90f;
+  color: black;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin-left: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-family: inherit;
+  margin: 1%;
 }

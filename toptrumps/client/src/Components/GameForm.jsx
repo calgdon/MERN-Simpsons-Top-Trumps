@@ -14,6 +14,7 @@ const GameForm = ({
   console.log("gameformcard", card);
 
   useEffect(() => {
+    // eslint-disable-next-line no-unused-expressions
     gameVsComputer == true && controllingPlayer === 2
       ? computerTurnTrigger()
       : null;
