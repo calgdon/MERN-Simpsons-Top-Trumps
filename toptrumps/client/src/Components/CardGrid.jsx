@@ -11,8 +11,8 @@ const CardGrid = ({ cards, deleteCardFromCards}) => {
 
   return (
     <>
-      <div className="CardGrid">
-      <ul className="CardList">{CardList}</ul>
+      <div id="CardGrid">
+      <ul id="CardList">{CardList}</ul>
       </div>
     </>
   );

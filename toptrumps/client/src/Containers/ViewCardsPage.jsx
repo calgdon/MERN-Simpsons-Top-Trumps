@@ -8,9 +8,12 @@ const ViewCardsPage = ({cards, addNewCard, deleteCardFromCards}) => {
   return (
     <>
     <NavBar/>
-    <div className='ViewCardsPage'>
-    <CardGrid cards={cards} deleteCardFromCards={deleteCardFromCards}/>
+    <div id='ViewCardsPage'>
+    <div><CardGrid cards={cards} deleteCardFromCards={deleteCardFromCards}/>
+    </div>
+    <div>
     <CardForm addNewCard={addNewCard} />
+    </div>
     </div>
     </>
   )

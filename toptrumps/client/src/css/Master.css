@@ -89,3 +89,107 @@ a:visited {
     justify-content: space-evenly;
     height: 5%;
 }
+
+#ViewCardsPage{
+    height: 95%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.character-image{
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
+#CardList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+
+}
+
+.card-detail{
+    min-width: 200px;
+    width: 30%;
+    max-width: 300px;
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 1%;
+    list-style: none;
+    list-style-type: none;
+    background-color: #f4ca1e;
+    text-align: -webkit-center;
+    height: 5%;
+}
+
+.card-category{
+    border: 5px solid black;
+    border-radius: 32px;
+    padding: 8px;
+    background-color: #0b31db;
+    color: aliceblue;
+    text-align: center;
+    width: 90%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 2%;
+}
+
+.delete-button{
+    display: flex;
+    background-color: #ee3737 ;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 5px solid black;
+    border-radius: 30px;
+    min-width: 38px;
+    width: 30%;
+    height: 5%;    
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+#card-name{
+    height: 5%;
+    font-size: 1.2em;
+}
+
+.card-whole{
+    position: sticky;
+    top: 80px;
+    background-color: #f4ca1e;
+    border: 5px solid #000000;
+    border-radius: 16px;
+    margin-top: 80px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formwrap{
+    color: #ffffff;
+    background-color: #0b31db;
+    border: 5px solid #000000;
+    margin: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.saveformbutton{
+    display: flex;
+    background-color: #3dee37 ;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 5px solid black;
+    border-radius: 30px;
+    min-width: 38px;
+    width: 30%;
+    height: 5%;    
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
