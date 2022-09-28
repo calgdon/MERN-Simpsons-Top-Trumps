@@ -1,6 +1,6 @@
 import React from "react";
 import CardDetail from "./CardDetail";
-import "../css/cardgrid.css"
+import "../css/Master.css"
 
 const CardGrid = ({ cards, deleteCardFromCards}) => {
   // if (!cards) return <h2>Loading...</h2>;
@@ -11,8 +11,8 @@ const CardGrid = ({ cards, deleteCardFromCards}) => {
 
   return (
     <>
-      <div className="CardGrid">
-      <ul className="CardList">{CardList}</ul>
+      <div id="CardGrid">
+      <ul id="CardList">{CardList}</ul>
       </div>
     </>
   );

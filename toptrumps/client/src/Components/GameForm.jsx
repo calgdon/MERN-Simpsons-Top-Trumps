@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/gameform.css";
+import "../css/Master.css";
 import toptrumpback from "../images/toptrumpback.jpeg";
 
 const GameForm = ({ card, controllingPlayer, playerNumber, setSelectedCategory, setCardComparison}) => {
@@ -14,9 +14,9 @@ const GameForm = ({ card, controllingPlayer, playerNumber, setSelectedCategory, 
 
   const playerCardRender =
       controllingPlayer == playerNumber ? (
-        <div className="card-detail">
+        <div className="game-card-detail">
           <form action="">
-            <h3 className="cardbutton"> {card.Individual} </h3>
+            <h3 id="card-name"> {card.Individual} </h3>
             <br />
             <img
               className="character-image"

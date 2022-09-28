@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/carddetail.css"
+import "../css/Master.css"
 
 const CardDetail = ({ card, deleteCardFromCards}) => {
 
@@ -13,15 +13,15 @@ const CardDetail = ({ card, deleteCardFromCards}) => {
 
   <li key = {card._id} className="card-detail">
   
-  <p className="character-name" id="paragraph">{card.Individual}</p>
+  <p className="card-category" id="card-name" >{card.Individual}</p>
   <img className="character-image" src={card.img_url} alt="Photo of simpsons character" />
-  <p className="most-loveable" id="paragraph">Most Loveable: {card["Most Lovable"]}</p>
-  <p className="smartest" id="paragraph">Smartest: {card.Smartest}</p>
-  <p className="fattest" id="paragraph">Fattest: {card.Fattest}</p>
-  <p className="biggest-nerd" id="paragraph">Biggest Nerd: {card["Biggest Nerd"]}</p>
-  <p className="greatest-anarchist" id="paragraph">Greatest Anarchist: {card["Greatest Anarchist"]}</p>
-  <p className="walk-of-fame-rating" id="paragraph">Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
-  <button className='delete' onClick={handleDeleteClick}> Delete?</button>
+  <p className="card-category" >Most Loveable: {card["Most Lovable"]}</p>
+  <p className="card-category" >Smartest: {card.Smartest}</p>
+  <p className="card-category" >Fattest: {card.Fattest}</p>
+  <p className="card-category" >Biggest Nerd: {card["Biggest Nerd"]}</p>
+  <p className="card-category" >Greatest Anarchist: {card["Greatest Anarchist"]}</p>
+  <p className="card-category" >Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
+  <button className='delete-button' onClick={handleDeleteClick}> Delete</button>
   </li>
   )
 };

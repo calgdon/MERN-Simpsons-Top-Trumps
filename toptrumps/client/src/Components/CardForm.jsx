@@ -1,6 +1,6 @@
 import { useState } from "react"
 import TopTrumpsService from "../services/TopTrumpsService"
-import "../css/cardform.css"
+import "../css/Master.css"
 
 
 const CardForm = ({addNewCard}) => {
@@ -45,6 +45,7 @@ const CardForm = ({addNewCard}) => {
         <h2>Add Card:</h2>
         <div className="formwrap">
             <label htmlFor="Individual">Individual:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="text"
@@ -53,9 +54,11 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData.Individual}
             />
+                        <br></br>
         </div>
         <div className="formwrap">
             <label htmlFor="img_url">ImageUrl:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="text"
@@ -64,10 +67,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData["img_url"]}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="MostLovable">Most Lovable:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -76,10 +81,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData["Most Lovable"]}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="Smartest">Smartest:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -88,10 +95,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData.Smartest}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="Fattest">Fattest:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -100,10 +109,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData.Fattest}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="BiggestNerd">Biggest Nerd:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -112,10 +123,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData["Biggest Nerd"]}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="GreatestAnarchist">Greatest Anarchist:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -124,10 +137,12 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData["Greatest Anarchist"]}
             />
+                        <br></br>
             
         </div>
         <div className="formwrap">
             <label htmlFor="WalkOfFameRating">Walk of Fame Rating:</label>
+            <br></br>
             <input
                   onChange={onChange}
                   type="number"
@@ -136,6 +151,7 @@ const CardForm = ({addNewCard}) => {
                   required
                   value={formData["Walk of Fame Rating"]}
             />
+                        <br></br>
             
         </div>
         <input className="saveformbutton" type="submit" value="Save" id="save"/>

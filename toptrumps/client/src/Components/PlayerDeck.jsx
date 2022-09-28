@@ -1,6 +1,6 @@
 import React from "react";
 import toptrumpback from "../images/toptrumpback.jpeg";
-import '../css/playerdeck.css'
+import '../css/Master.css'
 
 {/* <li>
   <img className="trumpCardBack" src={toptrumpback} />
@@ -9,7 +9,7 @@ const PlayerDeck = ({ deck }) => {
   const deckRender = deck.map(() => {
     return (
       <li className="playerDeckListItem">
-        <img className="trumpCardBack" src={toptrumpback} />
+        <img className="toptrumpbackdeck" src={toptrumpback} />
       </li>
     );
   });
