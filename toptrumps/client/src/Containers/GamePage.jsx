@@ -22,7 +22,7 @@ const GamePage = ({
   player1DeckState,
   player2DeckState,
   cardComparison,
-  setCardComparison
+  setCardComparison,
 }) => {
   const handleRerunSetup = () => {
     setupGame()
@@ -47,14 +47,14 @@ const GamePage = ({
       return (
         <div id='winningCardModal' class='modal'>
           <div id='winningCardFlexContainer'>
-              <CardComparisonDetail card={player1Card} />
-              <CardComparisonDetail card={player2Card} />
-            </div>
-
-            <button value={attribute} onClick={handleWinningCardModalClick}>
-              Next Card
-            </button>
+            <CardComparisonDetail card={player1Card} />
+            <CardComparisonDetail card={player2Card} />
           </div>
+
+          <button value={attribute} onClick={handleWinningCardModalClick}>
+            Next Card
+          </button>
+        </div>
       )
     }
   }
@@ -90,27 +90,30 @@ const GamePage = ({
 
   return (
     <>
-    <NavBar/>
-    <div id='gameplayWrapper'>
-      <div><PlayerDeck deck={player1DeckState}/></div>
-      <div className='gridComponent'>
-        <GameForm
-          card={player1Card}
-          controllingPlayer={controllingPlayer}
-          playerNumber={1}
-          handleClick={handleGameplayClick}
-        />
-        <GameForm
-          card={player2Card}
-          controllingPlayer={controllingPlayer}
-          playerNumber={2}
-          handleClick={handleGameplayClick}
-        />
-      </div>
-      <div>
-      
-      <PlayerDeck deck={player2DeckState}/>
-      
+      <NavBar />
+      <div id='gameplayWrapper'>
+        <div>
+          <PlayerDeck deck={player1DeckState} />
+        </div>
+
+        <div className='gridComponent'>
+          <GameForm
+            card={player1Card}
+            controllingPlayer={controllingPlayer}
+            playerNumber={1}
+            handleClick={handleGameplayClick}
+          />
+          <GameForm
+            card={player2Card}
+            controllingPlayer={controllingPlayer}
+            playerNumber={2}
+            handleClick={handleGameplayClick}
+          />
+        </div>
+
+        <div>
+          <PlayerDeck deck={player2DeckState} />
+        </div>
       </div>
       <div>{winnerRender()}</div>
       <div>{winningCardRender()}</div>
