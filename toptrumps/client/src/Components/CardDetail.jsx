@@ -21,6 +21,7 @@ const CardDetail = ({ card, deleteCardFromCards}) => {
   <p className="card-category" >Biggest Nerd: {card["Biggest Nerd"]}</p>
   <p className="card-category" >Greatest Anarchist: {card["Greatest Anarchist"]}</p>
   <p className="card-category" >Walk of Fame Rating: {card["Walk of Fame Rating"]}</p>
+  <button className='delete-button' >Update</button>
   <button className='delete-button' onClick={handleDeleteClick}> Delete</button>
   </li>
   )
