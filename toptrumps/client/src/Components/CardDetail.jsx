@@ -14,7 +14,7 @@ const CardDetail = ({ card, deleteCardFromCards}) => {
   <li key = {card._id} className="card-detail">
   
   <p className="card-category" id="card-name" >{card.Individual}</p>
-  <img className="character-image" src={card.img_url} alt="Photo of simpsons character" />
+  <img className="character-image" src={card.img_url} alt="Simpsons character" />
   <p className="card-category" >Most Loveable: {card["Most Lovable"]}</p>
   <p className="card-category" >Smartest: {card.Smartest}</p>
   <p className="card-category" >Fattest: {card.Fattest}</p>

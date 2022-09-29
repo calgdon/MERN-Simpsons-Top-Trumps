@@ -1,5 +1,4 @@
 import { useState } from "react"
-import TopTrumpsService from "../services/TopTrumpsService"
 import "../css/Master.css"
 
 

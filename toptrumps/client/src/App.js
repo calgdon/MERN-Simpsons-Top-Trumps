@@ -1,19 +1,14 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
+  BrowserRouter as Router, Route, Routes
 } from "react-router-dom";
-import "./css/Master.css";
-import ViewCardsPage from "./containers/ViewCardsPage";
-import TopTrumpsService from "./services/TopTrumpsService";
-import Title from "./containers/Title";
-import GamePage from "./containers/GamePage";
-import Rules from "./containers/Rules";
-import NavBar from './components/Navbar';
 import ErrorPage from './containers/ErrorPage';
 import GamePageComputer from './containers/GamePageComputer';
+import Rules from "./containers/Rules";
+import Title from "./containers/Title";
+import ViewCardsPage from "./containers/ViewCardsPage";
+import "./css/Master.css";
+import TopTrumpsService from "./services/TopTrumpsService";
 
 
 function App() {
@@ -199,26 +194,26 @@ function App() {
   const playGameRound = (attribute) => {
     const player1Deck = player1DeckState.map((card) => card)
     const player2Deck = player2DeckState.map((card) => card)
-    if (controllingPlayer == 1) {
+    if (controllingPlayer === 1) {
       if (player1Card[attribute] > player2Card[attribute]) {
         player1Deck.push(...[player1Card, player2Card])
       } else {
-        // eslint-disable-next-line no-unused-expressions
+        // eslint-disable-next-line no-unused-expressions, no-sequences
         player2Deck.push(...[player1Card, player2Card]), setControllingPlayer(2)
       }
     }
-    if (controllingPlayer == 2) {
+    if (controllingPlayer === 2) {
       if (player2Card[attribute] > player1Card[attribute]) {
         player2Deck.push(...[player2Card, player1Card])
       } else {
-        // eslint-disable-next-line no-unused-expressions
+        // eslint-disable-next-line no-unused-expressions, no-sequences
         player1Deck.push(...[player2Card, player1Card]), setControllingPlayer(1)
       }
     }
-    if (player1Deck.length == 0) {
+    if (player1Deck.length === 0) {
       setPlayer2Score(player2Score + 1)
       return setWinner(2)
-    } else if (player2Deck.length == 0) {
+    } else if (player2Deck.length === 0) {
       setPlayer1Score(player1Score + 1)
       return setWinner(1)
     } else {
