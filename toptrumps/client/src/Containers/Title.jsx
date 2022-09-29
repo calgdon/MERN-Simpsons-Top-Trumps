@@ -30,7 +30,7 @@ const Title = ({gameVsComputer, setGameVsComputer}) => {
 
    <Link className='general-button' to="/play">Play</Link>
 
-   <button className='gamemode-button' onClick={handleClick}>Select Game Mode <br/> <br/>{gameModeText}</button>
+   <button className='gamemode-button' onClick={handleClick}>Toggle Game Mode <br/>{gameModeText}</button>
   
 
   <Link className='general-button' to="/cards">Cards</Link>
