@@ -72,7 +72,7 @@ const GameForm = ({
   const playerCardRender =
     controllingPlayer === playerNumber ? (
       <div className="game-card-detail">
-        <form action="">
+        <form className="gameform" action="">
           <h3 id="card-name"> {card.Individual} </h3>
           <br />
           <img
