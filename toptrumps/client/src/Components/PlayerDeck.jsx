@@ -2,9 +2,7 @@ import React from "react";
 import toptrumpback from "../images/toptrumpback.jpeg";
 import '../css/Master.css'
 
-{/* <li>
-  <img className="trumpCardBack" src={toptrumpback} />
-</li>; */}
+
 const PlayerDeck = ({ deck }) => {
   const deckRender = deck.map(() => {
     return (
@@ -13,7 +11,6 @@ const PlayerDeck = ({ deck }) => {
       </li>
     );
   });
-  console.log(deckRender)
 
   return (
     <>

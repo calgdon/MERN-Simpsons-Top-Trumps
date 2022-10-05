@@ -11,7 +11,6 @@ const GameForm = ({
   setCardComparison,
   gameVsComputer,
 }) => {
-  console.log("gameformcard", card);
 
   useEffect(() => {
     // eslint-disable-next-line no-unused-expressions
@@ -57,8 +56,6 @@ const GameForm = ({
         computerDecision = category;
       }
     });
-    console.log("computerDecision",playerNumber, computerDecision);
-    console.log("highestValue", playerNumber, highestValue);
     setSelectedCategory(computerDecision);
     setCardComparison(true);
   };

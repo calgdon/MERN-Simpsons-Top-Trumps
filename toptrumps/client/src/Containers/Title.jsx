@@ -9,7 +9,6 @@ const Title = ({gameVsComputer, setGameVsComputer}) => {
 
   const handleClick=(e)=>{
     e.preventDefault()
-    console.log("helloMillie")
     let gameModeChange = gameVsComputer? false:true
     setGameVsComputer(gameModeChange)
   }
