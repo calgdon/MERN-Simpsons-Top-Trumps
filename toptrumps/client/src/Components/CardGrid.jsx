@@ -2,10 +2,11 @@ import React from "react";
 import CardDetail from "./CardDetail";
 import "../css/Master.css"
 
-const CardGrid = ({ cards, deleteCardFromCards}) => {
+const CardGrid = ({ cards, deleteCardFromCards, search}) => {
   // if (!cards) return <h2>Loading...</h2>;
 
-  const CardList = cards.map((card) => {
+  const CardList = cards.filter((card) => card.Individual.toLowerCase().includes(search))
+  .map((card) => {
     return (<CardDetail card={card} key={card._id} deleteCardFromCards={deleteCardFromCards} />);
   });
 

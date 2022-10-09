@@ -25,6 +25,7 @@ function App() {
   const [cardComparison, setCardComparison] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState()
   const [gameVsComputer, setGameVsComputer] = useState(false)
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     TopTrumpsService.getTopTrumps().then((cards) => setCards(cards))
@@ -125,6 +126,8 @@ function App() {
                 cards={cards}
                 addNewCard={addNewCard}
                 deleteCardFromCards={deleteCardFromCards}
+                search={search}
+                setSearch={setSearch}
               />
             }
           />

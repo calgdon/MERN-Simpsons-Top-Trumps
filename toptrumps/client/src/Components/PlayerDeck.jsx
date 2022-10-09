@@ -16,7 +16,7 @@ const PlayerDeck = ({ deck }) => {
     <>
   <br />
   <br/> 
-  <ul className="playerDeckList">{deckRender}</ul>;)
+  <ul className="playerDeckList">{deckRender}</ul>
   </>)
 }
 

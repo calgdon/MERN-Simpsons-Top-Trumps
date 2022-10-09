@@ -49,6 +49,8 @@ const GamePageComputer = ({
     </div>
   )
 
+  // line 61 and 66 could just be setupGame()
+
   const winnerRender = !winner ? null : (
     <div className='modal'>
       <div className='modalText' id='myModal'>

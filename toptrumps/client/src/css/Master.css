@@ -412,3 +412,29 @@ a:visited {
   height: 96%;
   margin: 0;
 }
+
+.search-box {
+  display: flex;
+  position: sticky;
+
+}
+
+.search-bar {
+  position: sticky;
+  top: 20px;
+  background-color: #f4ca1e;
+  border: 5px solid #000000;
+  border-radius: 16px;
+  margin-top: 80px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  font-size: 20px;
+  font-family: simpsonfont;
+  color: black
+}
+
+::placeholder {
+  color: black
+}
