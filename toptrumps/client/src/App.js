@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router, Route, Routes
 } from "react-router-dom";
-import ErrorPage from './containers/ErrorPage';
-import GamePageComputer from './containers/GamePageComputer';
-import Rules from "./containers/Rules";
-import Title from "./containers/Title";
-import ViewCardsPage from "./containers/ViewCardsPage";
+import ErrorPage from './Containers/ErrorPage';
+import GamePageComputer from './Containers/GamePageComputer';
+import Rules from "./Containers/Rules";
+import Title from "./Containers/Title";
+import ViewCardsPage from "./Containers/ViewCardsPage";
 import "./css/Master.css";
 import TopTrumpsService from "./services/TopTrumpsService";
 
