@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import NavBar from '../components/Navbar'
+import NavBar from '../Components/Navbar'
 import '../css/Master.css'
 
 const Rules = () => {
