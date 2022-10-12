@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CardComparisonDetail from '../components/CardComparisonDetail'
-import GameForm from '../components/GameForm'
-import NavBar from '../components/Navbar'
+import CardComparisonDetail from '../Components/CardComparisonDetail'
+import GameForm from '../Components/GameForm'
+import NavBar from '../Components/Navbar'
 
-import PlayerDeck from '../components/PlayerDeck'
+import PlayerDeck from '../Components/PlayerDeck'
 import '../css/Master.css'
 
 const GamePageComputer = ({
