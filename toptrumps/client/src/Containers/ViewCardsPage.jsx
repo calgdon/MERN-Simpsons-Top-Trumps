@@ -1,8 +1,8 @@
 import React from 'react'
-import CardForm from '../components/CardForm'
-import CardGrid from '../components/CardGrid'
-import NavBar from '../components/Navbar'
-import SearchCards from '../components/SearchCards'
+import CardForm from '../Components/CardForm'
+import CardGrid from '../Components/CardGrid'
+import NavBar from '../Components/Navbar'
+import SearchCards from '../Components/SearchCards'
 import "../css/Master.css"
 
 const ViewCardsPage = ({cards, addNewCard, deleteCardFromCards, search, setSearch}) => {
