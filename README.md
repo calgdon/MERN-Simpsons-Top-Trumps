@@ -15,7 +15,7 @@ The technologies utilised were as follows:
     
 ## Aim
 
-The aim of the project was to create a full stack web application to be utilised by staff within a gym to manage memberships, and register members for classes. The brief for the project was:
+The aim of the project was to create a full stack web application based on a game of our choice. The brief for the project was:
 
     - Create a browser game based on an existing card or dice game. 
     - Model and test the game logic and then display it in the browser for a user to interact with.
